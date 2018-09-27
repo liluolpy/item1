@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="p1" width="1680" height="531" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:game="game.*">
+	<e:Group left="0" right="0" top="0" bottom="0">
+		<e:Group id="p1_1" scaleX="1" scaleY="1" width="1680" height="531" y="0" x="0">
+			<e:Image scaleX="1" scaleY="1" left="0" top="0" source="p1_1_png"/>
+			<e:Image id="p11_d1" source="deng_png" x="172.5" y="150.53" anchorOffsetX="0" width="426" anchorOffsetY="0" height="437"/>
+			<e:Image id="p11_t1" source="p11_t1_png" x="1117" y="217.53" anchorOffsetY="131"/>
+			<e:Image id="p11_t2" source="p11_t2_png" x="975" y="246.53" anchorOffsetY="125"/>
+			<e:Image id="p11_r1" source="p11_r1_png" x="1205" y="186.19"/>
+		</e:Group>
+		<e:Group id="p1_2" scaleX="1" scaleY="1" width="1680" height="531" x="0" y="0">
+			<e:Image x="0" y="0" source="p1_2_png"/>
+			<e:Image id="p12_r1" source="p12_r1_png" x="671.2" y="246.19"/>
+			<e:Image id="p12_t4" x="868" y="286.84" anchorOffsetX="111" anchorOffsetY="67" source="p12_t4_png"/>
+			<e:Image id="p12_t3" x="728.34" y="262.84" anchorOffsetY="117" source="p12_t3_png"/>
+			<e:Image id="p12_t2" x="359" y="251.68" anchorOffsetY="75" anchorOffsetX="120" source="p12_t2_png"/>
+			<e:Image id="p12_t1" x="118.66" y="232.86" anchorOffsetY="117" source="p12_t1_png"/>
+		</e:Group>
+		<e:Group id="p1_3" scaleX="1" scaleY="1" width="1680" x="0" height="531" y="0">
+			<e:Image scaleX="1" scaleY="1" left="0" top="0" source="p1_3_png"/>
+			<e:Image id="p13_r1" source="p13_r1_png" x="525.38" y="192.19"/>
+			<e:Image id="p13_t1" x="207" y="253.53" anchorOffsetY="70" source="p13_t1_png"/>
+			<e:Image id="p13_t3" x="1283" y="222.19" anchorOffsetY="70" source="p13_t3_png"/>
+			<e:Image id="p13_t2" x="1395" y="233.34" anchorOffsetY="127" source="p13_t2_png"/>
+			<e:Image id="deng2" source="deng_png" x="678" y="159" anchorOffsetX="0" width="343.17" anchorOffsetY="0" height="331"/>
+		</e:Group>
+	</e:Group>
+	<e:Group id="tan_grp" left="0" right="0" top="0" bottom="0">
+		<e:Group id="d1grp" left="0" right="0" top="0" bottom="0">
+			<game:Dian id="d3" width="34" height="34" x="840" y="228.84" skinName="dian"/>
+			<game:Dian id="d4" width="34" height="34" x="1395" y="137.5" skinName="dian"/>
+			<game:Dian width="34" height="34" x="636" y="286.84" skinName="dian" id="d2"/>
+			<game:Dian id="d1" width="34" height="34" x="359" y="286.84" skinName="dian"/>
+		</e:Group>
+		<e:Group id="d2grp" left="0" right="0" top="0" bottom="0">
+			<game:Dian id="d8" width="34" height="34" x="247" y="232.86" skinName="dian"/>
+			<game:Dian id="d9" width="34" height="34" x="1308.5" y="264.5" skinName="dian"/>
+		</e:Group>
+		<e:Group id="d3grp" left="0" right="0" top="0" bottom="0">
+			<game:Dian id="d7" width="34" height="34" x="1085.65" y="269.84" skinName="dian"/>
+			<game:Dian id="d6" width="34" height="34" x="541.34" y="294.19" skinName="dian" scaleX="1" scaleY="1"/>
+			<game:Dian id="d5" width="34" height="34" x="281" y="279" skinName="dian"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

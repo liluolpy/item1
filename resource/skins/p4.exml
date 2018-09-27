@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="p4" width="1680" height="531" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:game="game.*">
+	<e:Group left="0" right="0" top="0" bottom="0" x="10" y="10">
+		<e:Group id="p4_1" x="0" y="0" scaleX="1" scaleY="1" width="1680" height="531">
+			<e:Image scaleX="1" scaleY="1" left="0" top="0" x="0" y="0" source="p4_2_png"/>
+			<e:Image id="p42_r1" source="p42_r1_png" x="1206" y="304" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group id="p4_2" x="0" y="0" scaleX="1" scaleY="1" width="1680" height="531">
+			<e:Image x="0" y="0" source="p4_3_png"/>
+			<e:Image id="p43_r1" source="p43_r1_png" x="279" y="228"/>
+		</e:Group>
+		<e:Group id="p4_3" x="0" y="0" scaleX="1" scaleY="1" width="1680" height="531">
+			<e:Image scaleX="1" scaleY="1" left="0" top="0" source="p4_1_png"/>
+		</e:Group>
+	</e:Group>
+	<e:Group id="tan_grp" right="0" left="0" top="0" bottom="0">
+		<e:Group id="d1grp" left="0" right="0" top="0" bottom="0">
+			<game:Dian id="d22" width="34" height="34" x="1445.5" y="256" skinName="dian"/>
+			<game:Dian id="d21" width="34" height="34" x="899.5" y="306" skinName="dian"/>
+			<game:Dian id="d20" width="34" height="34" x="418.5" y="231.5" skinName="dian"/>
+		</e:Group>
+		<e:Group id="d2grp" left="0" right="0" top="0" bottom="0">
+		<game:Dian id="d25" xmlns:game="game.*" width="34" height="34" x="630.65" y="304" skinName="dian"/>
+		<game:Dian id="d24" xmlns:game="game.*" width="34" height="34" x="524.5" y="378" skinName="dian"/>
+		<game:Dian id="d23" xmlns:game="game.*" width="34" height="34" x="461" y="197.5" skinName="dian" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group id="d3grp" left="0" right="0" top="0" bottom="0">
+			<game:Dian id="d28" width="34" height="34" x="1188" y="290" skinName="dian"/>
+			<game:Dian id="d27" width="34" height="34" x="478" y="184" skinName="dian"/>
+			<game:Dian id="d26" width="34" height="34" x="190.5" y="304" skinName="dian"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

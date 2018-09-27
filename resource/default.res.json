@@ -1,0 +1,429 @@
+{
+	"groups": [
+		{
+			"keys": "loading_png,jiantou_png,deng_png,button_png,bg2_png,dian_png,t15_png,t17_png,t20_png,t21_png,t22_png,t23_png,t24_png,t26_png,t28_png,t29_png,t30_png,t31_png,t33_png,t34_png,t35_png,t36_png,t1_png,t3_png,t5_png,t6_png,t8_png,t9_png,t10_png,t11_png,t4_png,t7_png,p2_1_png,p3_1_png,p4_1_png,p1_1_png,p1_2_png,p1_3_png,p2_2_png,p2_3_png,p3_3_png,p3_2_png,p31_r1_png,p31_t1_png,p31_t2_png,p32_w1_png,p33_r1_png,p32_r1_png,p4_2_png,p4_3_png,p42_r1_png,p43_r1_png,p33_1_png,p11_r1_png,p11_t1_png,p11_t2_png,p12_t1_png,p12_t2_png,p12_t3_png,p12_t4_png,p13_t1_png,p13_t2_png,p13_t3_png,p12_r1_png,p13_r1_png,p21_r1_png,p21_t1_png,p22_r1_png,p23_r1_png,p23_t1_png,p23_t2_png,run_json,run_png,r1_json,r1_png,kf_json,kf_png,yan_json,yan_png,hua_json,hua_png,mouth_json,mouth_png",
+			"name": "preload"
+		},
+		{
+			"keys": "loading_png",
+			"name": "loading"
+		}
+	],
+	"resources": [
+		{
+			"url": "images/deng.png",
+			"type": "image",
+			"name": "deng_png"
+		},
+		{
+			"url": "images/jiantou.png",
+			"type": "image",
+			"name": "jiantou_png"
+		},
+		{
+			"url": "images/loading.png",
+			"type": "image",
+			"name": "loading_png"
+		},
+		{
+			"url": "images/bg2.png",
+			"type": "image",
+			"name": "bg2_png"
+		},
+		{
+			"url": "images/button.png",
+			"type": "image",
+			"name": "button_png"
+		},
+		{
+			"name": "dian_png",
+			"type": "image",
+			"url": "images/dian.png"
+		},
+		{
+			"name": "t15_png",
+			"type": "image",
+			"url": "images/redtu/t15.png"
+		},
+		{
+			"name": "t17_png",
+			"type": "image",
+			"url": "images/redtu/t17.png"
+		},
+		{
+			"name": "t20_png",
+			"type": "image",
+			"url": "images/redtu/t20.png"
+		},
+		{
+			"name": "t21_png",
+			"type": "image",
+			"url": "images/redtu/t21.png"
+		},
+		{
+			"name": "t22_png",
+			"type": "image",
+			"url": "images/redtu/t22.png"
+		},
+		{
+			"name": "t23_png",
+			"type": "image",
+			"url": "images/redtu/t23.png"
+		},
+		{
+			"name": "t24_png",
+			"type": "image",
+			"url": "images/redtu/t24.png"
+		},
+		{
+			"name": "t26_png",
+			"type": "image",
+			"url": "images/redtu/t26.png"
+		},
+		{
+			"name": "t28_png",
+			"type": "image",
+			"url": "images/redtu/t28.png"
+		},
+		{
+			"name": "t29_png",
+			"type": "image",
+			"url": "images/redtu/t29.png"
+		},
+		{
+			"name": "t30_png",
+			"type": "image",
+			"url": "images/redtu/t30.png"
+		},
+		{
+			"name": "t31_png",
+			"type": "image",
+			"url": "images/redtu/t31.png"
+		},
+		{
+			"name": "t33_png",
+			"type": "image",
+			"url": "images/redtu/t33.png"
+		},
+		{
+			"name": "t34_png",
+			"type": "image",
+			"url": "images/redtu/t34.png"
+		},
+		{
+			"name": "t35_png",
+			"type": "image",
+			"url": "images/redtu/t35.png"
+		},
+		{
+			"name": "t36_png",
+			"type": "image",
+			"url": "images/redtu/t36.png"
+		},
+		{
+			"name": "t1_png",
+			"type": "image",
+			"url": "images/redtu/t1.png"
+		},
+		{
+			"name": "t3_png",
+			"type": "image",
+			"url": "images/redtu/t3.png"
+		},
+		{
+			"name": "t5_png",
+			"type": "image",
+			"url": "images/redtu/t5.png"
+		},
+		{
+			"name": "t6_png",
+			"type": "image",
+			"url": "images/redtu/t6.png"
+		},
+		{
+			"name": "t8_png",
+			"type": "image",
+			"url": "images/redtu/t8.png"
+		},
+		{
+			"name": "t9_png",
+			"type": "image",
+			"url": "images/redtu/t9.png"
+		},
+		{
+			"name": "t10_png",
+			"type": "image",
+			"url": "images/redtu/t10.png"
+		},
+		{
+			"name": "t11_png",
+			"type": "image",
+			"url": "images/redtu/t11.png"
+		},
+		{
+			"name": "t4_png",
+			"type": "image",
+			"url": "images/redtu/t4.png"
+		},
+		{
+			"name": "t7_png",
+			"type": "image",
+			"url": "images/redtu/t7.png"
+		},
+		{
+			"name": "p2_1_png",
+			"type": "image",
+			"url": "images/2/p2_1.png"
+		},
+		{
+			"name": "p3_1_png",
+			"type": "image",
+			"url": "images/3/p3_1.png"
+		},
+		{
+			"name": "p4_1_png",
+			"type": "image",
+			"url": "images/4/p4_1.png"
+		},
+		{
+			"name": "p1_1_png",
+			"type": "image",
+			"url": "images/1/p1_1.png"
+		},
+		{
+			"name": "p1_2_png",
+			"type": "image",
+			"url": "images/1/p1_2.png"
+		},
+		{
+			"name": "p1_3_png",
+			"type": "image",
+			"url": "images/1/p1_3.png"
+		},
+		{
+			"name": "p2_2_png",
+			"type": "image",
+			"url": "images/2/p2_2.png"
+		},
+		{
+			"name": "p2_3_png",
+			"type": "image",
+			"url": "images/2/p2_3.png"
+		},
+		{
+			"name": "p3_3_png",
+			"type": "image",
+			"url": "images/3/p3_3.png"
+		},
+		{
+			"name": "p3_2_png",
+			"type": "image",
+			"url": "images/3/p3_2.png"
+		},
+		{
+			"name": "p31_r1_png",
+			"type": "image",
+			"url": "images/3/p31_r1.png"
+		},
+		{
+			"name": "p31_t1_png",
+			"type": "image",
+			"url": "images/3/p31_t1.png"
+		},
+		{
+			"name": "p31_t2_png",
+			"type": "image",
+			"url": "images/3/p31_t2.png"
+		},
+		{
+			"name": "p32_w1_png",
+			"type": "image",
+			"url": "images/3/p32_w1.png"
+		},
+		{
+			"name": "p33_r1_png",
+			"type": "image",
+			"url": "images/3/p33_r1.png"
+		},
+		{
+			"name": "p32_r1_png",
+			"type": "image",
+			"url": "images/3/p32_r1.png"
+		},
+		{
+			"name": "p4_2_png",
+			"type": "image",
+			"url": "images/4/p4_2.png"
+		},
+		{
+			"name": "p4_3_png",
+			"type": "image",
+			"url": "images/4/p4_3.png"
+		},
+		{
+			"name": "p42_r1_png",
+			"type": "image",
+			"url": "images/4/p42_r1.png"
+		},
+		{
+			"name": "p43_r1_png",
+			"type": "image",
+			"url": "images/4/p43_r1.png"
+		},
+		{
+			"name": "p33_1_png",
+			"type": "image",
+			"url": "images/3/p33_1.png"
+		},
+		{
+			"name": "p11_r1_png",
+			"type": "image",
+			"url": "images/1/p11_r1.png"
+		},
+		{
+			"name": "p11_t1_png",
+			"type": "image",
+			"url": "images/1/p11_t1.png"
+		},
+		{
+			"name": "p11_t2_png",
+			"type": "image",
+			"url": "images/1/p11_t2.png"
+		},
+		{
+			"name": "p12_t1_png",
+			"type": "image",
+			"url": "images/1/p12_t1.png"
+		},
+		{
+			"name": "p12_t2_png",
+			"type": "image",
+			"url": "images/1/p12_t2.png"
+		},
+		{
+			"name": "p12_t3_png",
+			"type": "image",
+			"url": "images/1/p12_t3.png"
+		},
+		{
+			"name": "p12_t4_png",
+			"type": "image",
+			"url": "images/1/p12_t4.png"
+		},
+		{
+			"name": "p13_t1_png",
+			"type": "image",
+			"url": "images/1/p13_t1.png"
+		},
+		{
+			"name": "p13_t2_png",
+			"type": "image",
+			"url": "images/1/p13_t2.png"
+		},
+		{
+			"name": "p13_t3_png",
+			"type": "image",
+			"url": "images/1/p13_t3.png"
+		},
+		{
+			"name": "p12_r1_png",
+			"type": "image",
+			"url": "images/1/p12_r1.png"
+		},
+		{
+			"name": "p13_r1_png",
+			"type": "image",
+			"url": "images/1/p13_r1.png"
+		},
+		{
+			"name": "p21_r1_png",
+			"type": "image",
+			"url": "images/2/p21_r1.png"
+		},
+		{
+			"name": "p21_t1_png",
+			"type": "image",
+			"url": "images/2/p21_t1.png"
+		},
+		{
+			"name": "p22_r1_png",
+			"type": "image",
+			"url": "images/2/p22_r1.png"
+		},
+		{
+			"name": "p23_r1_png",
+			"type": "image",
+			"url": "images/2/p23_r1.png"
+		},
+		{
+			"name": "p23_t1_png",
+			"type": "image",
+			"url": "images/2/p23_t1.png"
+		},
+		{
+			"name": "p23_t2_png",
+			"type": "image",
+			"url": "images/2/p23_t2.png"
+		},
+		{
+			"name": "run_json",
+			"type": "json",
+			"url": "images/run.json"
+		},
+		{
+			"name": "run_png",
+			"type": "image",
+			"url": "images/run.png"
+		},
+		{
+			"name": "r1_json",
+			"type": "json",
+			"url": "images/dh/r1.json"
+		},
+		{
+			"name": "r1_png",
+			"type": "image",
+			"url": "images/dh/r1.png"
+		},
+		{
+			"name": "kf_json",
+			"type": "json",
+			"url": "images/dh/kf.json"
+		},
+		{
+			"name": "kf_png",
+			"type": "image",
+			"url": "images/dh/kf.png"
+		},
+		{
+			"name": "yan_json",
+			"type": "json",
+			"url": "images/dh/yan.json"
+		},
+		{
+			"name": "yan_png",
+			"type": "image",
+			"url": "images/dh/yan.png"
+		},
+		{
+			"name": "hua_json",
+			"type": "json",
+			"url": "images/dh/hua.json"
+		},
+		{
+			"name": "hua_png",
+			"type": "image",
+			"url": "images/dh/hua.png"
+		},
+		{
+			"name": "mouth_json",
+			"type": "json",
+			"url": "images/dh/mouth.json"
+		},
+		{
+			"name": "mouth_png",
+			"type": "image",
+			"url": "images/dh/mouth.png"
+		}
+	]
+}

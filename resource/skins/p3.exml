@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="p3" width="1680" height="531" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:game="game.*">
+	<e:Group left="0" right="0" top="0" bottom="0" x="10" y="10">
+		<e:Group id="p3_1" x="0" y="0" scaleX="1" scaleY="1" width="1680" height="531">
+		<e:Image scaleX="1" scaleY="1" left="0" top="0" source="p3_1_png"/>
+			<e:Image id="p31_r1" source="p31_r1_png" x="585.81" y="216.39"/>
+			<e:Image id="p31_t1" source="p31_t1_png" x="514.69" y="265.5" anchorOffsetY="129"/>
+			<e:Image id="p31_t2" source="p31_t2_png" x="782" y="229" anchorOffsetY="139"/>
+		</e:Group>
+		<e:Group id="p3_2" x="0" y="0" scaleX="1" scaleY="1" width="1680" height="531">
+			<e:Image source="p3_2_png" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Image id="p32_w1" source="p32_w1_png" x="1551.08" y="-4.48"/>
+			<e:Image id="p32_r1" source="p32_r1_png" x="910.39" y="106.42"/>
+		</e:Group>
+		<e:Group id="p3_3" x="0" y="0" scaleX="1" scaleY="1" width="1680" height="531">
+			<e:Image source="p3_3_png" x="0" y="0"/>
+			<e:Image id="p33_r1" source="p33_r1_png" x="786.65" y="203.38"/>
+			<e:Image source="p33_1_png" x="984.33" y="301.68" scaleX="1" scaleY="1"/>
+		</e:Group>
+	</e:Group>
+	<e:Group id="tan_grp" right="0" left="0" top="0" bottom="0">
+		<e:Group id="d1grp" left="0" right="0" top="0" bottom="0">
+		<game:Dian id="d30" xmlns:game="game.*" width="34" height="34" x="864" y="351.89" skinName="dian"/>
+			<game:Dian id="d29" width="34" height="34" x="686" y="304" skinName="dian"/>
+		</e:Group>
+		<e:Group id="d2grp" left="0" right="0" top="0" bottom="0">
+			<game:Dian id="d36" width="34" height="34" x="1310.5" y="216.39" skinName="dian"/>
+			<game:Dian id="d35" width="34" height="34" x="1176.5" y="242" skinName="dian"/>
+			<game:Dian id="d34" width="34" height="34" x="953.81" y="208" skinName="dian"/>
+		</e:Group>
+		<e:Group id="d3grp" left="0" right="0" top="0" bottom="0">
+		<game:Dian id="d33" xmlns:game="game.*" width="34" height="34" x="1171.06" y="290.92" skinName="dian"/>
+		<game:Dian id="d32" xmlns:game="game.*" width="34" height="34" x="985.73" y="276.58" skinName="dian" scaleX="1" scaleY="1"/>
+			<game:Dian id="d31" width="34" height="34" x="932.82" y="251.16" skinName="dian"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,3116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=1200" />
+	</head>
+	<link rel="stylesheet" href="https://m1.lefile.cn/smb/idangerous.swiper.css">
+	<style type="text/css">
+	*{padding:0;margin:0;}
+	 li{list-style: none;}
+	 a{text-decoration: none;}
+	 body{font-family:FZLTHJW--GB1-0;font-weight: normal;font-stretch: normal ;}
+	.bannar{width:100%;height:560px;position:relative;}
+    .img{width:100%;height:560px; overflow:hidden;}
+    .img ul li{width:100%;height:560px;list-style-type:none;position:absolute;}
+    .img ul a{display:block;width:100%; height:560px;text-decoration: none;}
+    .img ul a img{display:block;width:100%; height:560px;border: none;}
+    .nav{overflow:hidden;height:20px;position:absolute;bottom:30px;left:50%;z-index:10;}
+    .nav ul{height:20px;margin:0 auto;}
+    .nav ul li{width:30px;height:20px;text-align:center;padding:8px 0;box-sizing:border-box;float:left;margin:0 5px;list-style-type: none;border-radius:5px;overflow: hidden;cursor: pointer;}
+    .nav ul li .line{width: 100%;height: 4px;background:rgba(0,0,0,.5);border-radius: 7px;overflow: hidden;}
+    .nav ul li p{width:0; height:100%;background:rgba(255,255,255,0.8);float:left;} 
+    .mask {position: fixed;left: 0;right: 0;top: 0;bottom: 0;z-index: 5;background: rgba(0, 0, 0, 0.5);display:none;}
+    .dialog-custom {width:980px;min-height:580px;height:auto!important;height:580px;background-color: #ffffff;border-radius: 8px;position: absolute;left:50%;margin-left:-490px;top:600px;z-index: 10;display:none;}
+    .sucessTi{position:relative;width:680px;height:220px;padding-top:60px;background-color:#ffffff;border-radius: 8px;position: absolute;left:50%;margin-left:-340px;top:700px;z-index:10;display: none;}
+    .sucessTi h2{text-align: center;font-size:24px;}
+    .sucessTi p{line-height:30px;text-align: center;font-size:18px;margin-top:30px;}
+    .sucessTi p span{color:red;}
+    .sucessTi i{display: block;width:30px;height:30px;background:url(https://p1.lefile.cn/product/adminweb/2018/08/11/3c8839eb-4a8e-4989-83f2-c6181c1c2d61.png) no-repeat;position:absolute;right:10px;top:0;cursor: pointer;}
+    .dialog-custom .forms {min-height:350px;height:auto!important;height:350px; }
+    .dialog-custom .forms{ width: 467px;margin: 0 auto;margin-top:30px;}
+    .dialog-custom .forms p{height:60px;width:470px;margin:0 auto;}
+    .dialog-custom .forms p label{width:100px;display: block;float:left;line-height:40px;font-size:18px;}
+    .dialog-custom .forms #code{width:180px;float:left;}
+    .dialog-custom .forms .time{cursor:pointer;display:block;line-height:40px;font-size:18px;width:170px;text-align: center;height:40px;background:#CECECE;float:left;}
+    .dialog-custom .forms p input{width: 350px;height: 40px;outline: none;border: solid 1px #dcdcdf;display: inline-block;font-size: 18px;padding-left: 10px;box-sizing: border-box; }
+    .dialog-custom .forms p i{padding-left:110px;line-height:20px;height:20px;display: block;font-size:12px;width:240px;color:red;font-style: normal;}
+    .dialog-custom .forms .softwareKind::-webkit-input-placeholder{color:#CECECE;font-size:18x;}
+    .dialog-custom .forms p select{width: 350px;height: 40px;outline: none;border: solid 1px #dcdcdf;font-size:18px;cursor: pointer;}
+    .dialog-custom .forms p select option{font-size:18px;text-align:center;outline: none;line-height:40px;cursor: pointer;}
+    .dialog-custom .forms .ruanjian{display:none;}
+    .dialog-custom .forms .pcontent{height:100px;display: none;}
+    .dialog-custom .forms .pcontent textarea{width:350px;height:100px;resize: none;outline: none;}
+    .choice-btn {width: 467px;margin: 40px auto;text-align: center;}
+    .choice-btn button {width: 100px;height: 30px;line-height: 30px;text-align: center;border-radius: 4px;background: none;outline: none;border: none;font-size: 14px;margin: 0 9px;cursor: pointer; }
+    .choice-btn .ljdz {background-color: #01baf2;border: solid 1px #01baf2;color: #ffffff; }
+    .choice-btn .close {border: solid 1px #dcdcdf; }
+    .dialog-custom .forms .cheackCode{display:none;}
+    
+    .itSimple{width:100%;min-height:500px;height:auto !important;height:500px;}
+    .itSimple .itFrist{background: #f5f6f6;}
+	.itSimple  .itTable{width:100%;height:100px;position:relative;z-index: 0;background: #FFFFFF;}
+	.itSimple  .table{width:1196px;height:100px;margin:0 auto;display: flex;justify-content: space-around;}
+	.itSimple  .table li{list-style:none;text-align: center;height:100px;line-height: 100px;cursor: pointer;}
+	.itSimple  .table .active{z-index: 2;line-height:96px;position: relative;color:#00b8de;border-top:2px solid #00b8de;}
+	.itSimple  .table li span{display:inline-block;font-size:24px;}
+	.itSimple  .fristContent{width:1200px;min-height:352px;margin:0 auto;height:382px;height:auto !important;}
+	.itSimple  .fristContent .Fcontent{display:none;width:1200px;margin:0 auto;padding:60px 0;height:480px;overflow: hidden;box-sizing: border-box;}
+	.itSimple  .fristContent .num1{float:left;}
+	.itSimple  .fristContent .num1 img{width:150px;border:none;display: block;height:127px;padding:10px 25px;}
+	.itSimple .fristContent .num1 ul li{padding-left: 28px;}
+	.itSimple  .fristContent  li a{line-height:32px;font-size:16px;font-family:"arial";color:#000;}
+	.itSimple  .fristContent .Ftitle>a{font-size: 16px;color: #303233;}
+	.itSimple  .fristContent .Ftitle>.num13{color: #00b8de;}
+	.itSimple  .fristContent .num1 .more{color:#2eb9ed;width:100%;padding-left: 25px;}
+	.itSimple  .fristContent .num2{width:200px;height:232px;float:left;}
+	.itSimple  .fristContent .num2 ul{padding-left: 75px;}
+	.itSimple  .fristContent .num21{width:200px;float:left;}
+	.itSimple  .fristContent .num21 ul{padding-left: 75px;}
+	.itSimple  .fristContent .num21 img{width:80px;border:none;display: block;height:58px;margin:10px 60px;}
+	.itSimple  .fristContent .num2 img{width:80px;border:none;display: block;height:58px;margin:10px 60px;}
+	.itSimple  .fristContent .num3{width:380px;height:350px;float:left;background: #FFFFFF;border: 1px solid #d3d3d3;margin: 0 9px;}
+	.itSimple  .fristContent .num3 img{width:54px;display: block;height:54px;margin: 45px auto 35px;}
+	.itSimple  .fristContent .num3 ul>li{text-align: center;}
+	.itSimple  .fristContent .num3 .num{margin-top: 28px;}
+	.itSimple  .fristContent .num4{background: #FFFFFF;width:1200px;height:120px;margin:0 auto 12px;} 
+	.itSimple  .fristContent .num4 p{width:170px;line-height:120px;float:left;font-size:24px;color: #00b8de;text-align: center;}
+	.itSimple  .fristContent .num4 img{float:left;display: block;border:none;width:813px;height:100%;}
+	.itSimple  .fristContent .num4 .tupian1{float:left;display: block;border:none;width:450px;height:100%;}
+	.itSimple  .fristContent .num4 .tupian2{float:left;display: block;border:none;width:270px;height:100%;}
+	.itSimple  .fristContent .num4 a{float: left;width:151px;height:42px;background:url(https://p3.lefile.cn/product/adminweb/2018/09/14/8857b2c9-120a-4d72-9df9-afac34641b9d.png) no-repeat;margin:39px 33px;}
+	.itSimple  .fristContent .num5{ width: 355px;height: 315px;margin: 0 auto;}
+	.itSimple  .fristContent .num5 img{width: 100%;height: 100%;}
+	.itSimple  .fristContent .fristTop{position: relative;}
+	.itSimple  .fristContent .num61{font-size: 30px; position: absolute;left: 90px;top: 250px;color: #00b8de;}
+	.itSimple  .fristContent .num62{font-size: 30px;position: absolute;right: 68px;top: 250px;}
+	.itSimple  .fristContent .num62 span{color: #00B8DE;}
+	.itSimple  .fristContent .num63 span{font-size: 16px;position: absolute;display: block;width: 93px;height: 93px;border: 1px solid #c4c4c4;border-radius: 50%;text-align: center;padding-top: 26px;box-sizing: border-box;}
+	.itSimple  .fristContent .num63 .psn1{right: 396px;top: 95px;}
+	.itSimple  .fristContent .num63 .psn2{right: 460px;bottom: 80px;}
+	.itSimple  .fristContent .num63 .psn3{top: 35px;left: 340px;}
+	.itSimple  .fristContent .num63 .psn4{left: 355px;bottom: 80px;}
+	.itSimple  .fristContent .di4{display: block;color:#000;}
+	.itSimple  .fristContent .fActive{display: block;}
+	.itSimple  .fristContent .padLi>li{padding-top: 42px;}
+	.itSimple  .fristContent .tcLi{padding:50px 0 34px;}
+	
+	.itSimple .itSecond{width:100%;height:100px;}
+	.itSimple .itSecond  .sContent{display:none;width:100%;margin:0 auto;height:100px;background:url(https://p3.lefile.cn/product/adminweb/2018/09/06/7676db56-d3d9-45d9-b6f0-28b32a6d3c02.png) no-repeat;}
+	.itSimple .itSecond  .sContent .sCon{width: 1200px;margin: 0 auto;display: flex;justify-content: center;}
+	.itSimple .itSecond  .left{line-height:100px;text-align:center;width:600px;font-size:30px;color:#fff;font-family:FZLTHJW--GB1-0;font-stretch: normal;}
+	.itSimple .itSecond  .right{height:100px;width: 600px;text-align: center;}
+	.itSimple .itSecond  .right .write{margin:29px 69px;}
+	.itSimple .itSecond  .right .write .telphone{border:1px solid #fff;color:#fff;float: left;height:40px;width:300px;margin-left:5px;line-height:50px;font-size:18px;padding-left:10px;outline: none;background:transparent;}
+	.itSimple .itSecond  .right .write input::input-placeholder{color:#9fd4df;padding-left:20px;font-size:18px;line-height:50px;}
+	.itSimple .itSecond  .right .write .telphone::-webkit-input-placeholder{color:#9fd4df;padding-left:20px;font-size:18px;line-height:50px;}
+	.itSimple .itSecond  .right .write .btn{border:1px solid #fff;color:#fff;cursor:pointer;width:120px;height:42px;display:block;color:#fff;margin-left:12px;float:left;text-align: center;line-height:42px;font-size:16px;}
+	.itSimple .itSecond  .right .write .btn:hover{background: #FFFFFF;color: #00b8de;}
+	.itSimple .itSecond  .itsActive{display:block;}
+	
+	.itSimple .itThree{width:1200px;margin:0 auto;height:680px;}
+	.itSimple .itThree .tTtitle{line-height:130px;font-size:36px;font-family:FZLTHJW--GB1-0;font-weight: normal;font-stretch: normal;text-align: center;}
+    .itSimple .itThree .left{position:relative;width:590px;float:left;background:url(https://p4.lefile.cn/product/adminweb/2018/09/06/4f9b79ee-41b4-42b9-82ec-ddc804591380.png) no-repeat;height:550px;margin-right:10px;}
+    .itSimple .itThree .left a{width:100px;height:30px;line-height:30px;text-align:center;display: block;border: solid 1px #ff0000;position:absolute;bottom: 43px;left:245px;color: #ff0000;}
+    .itSimple .itThree .left .left1{position:absolute;font-size:30px;bottom:155px;left:152px;color:#000;}
+    .itSimple .itThree .left .left2{position:absolute;bottom:85px;width:590px;}
+    .itSimple .itThree .left .left2 h2{line-height:40px;font-size:16px;text-align: center;color: #252525;font-weight: normal;}
+    .itSimple .itThree .left .left2 p{line-height:30px;font-size:16px;text-align: center;color: #3b52cc;}
+    .itSimple .itThree .left .tthree{width:260px;line-height:40px;font-size:30px;color:#9f9f9f;margin:0 auto;margin-top:85px;}
+    .itSimple .itThree .left .tfive{width:260px;display:block;line-height:40px;font-size:30px;color:#9f9f9f;margin:0 auto;margin-top:85px;text-decoration: underline;}
+    .itSimple .itThree .right{width:600px;float:left;height:550px;}
+	.itSimple .itThree .right a{color:#000;float:left;width:290px;height:270px;margin-right:10px;margin-bottom:10px;background:url(https://p3.lefile.cn/product/adminweb/2018/08/09/092fe4ea-4aa1-46a4-916d-d22c8c9bdeb1.png) no-repeat;}
+	.itSimple .itThree .right img{display: block;border:none;width:135px;height:170px;margin:0 80px;}
+	.itSimple .itThree .right .rTitle{width:100%;line-height:30px;text-align: center;font-weight: bold;font-family: "微软雅黑";}
+	.itSimple .itThree .right .rDetaile{width:100%;line-height:28px;text-align: center;font-family: arial;}
+	.itSimple .itThree .right .rPrice{width:100%;line-height:30px;text-align: center;font-family: arial;color:red;}
+	.itSimple .itFour{width:100%;height:550px;}
+	.itSimple .itFour .tTtitle{text-align:center;line-height:144px;font-size:36px;font-family:FZLTHJW--GB1-0;font-weight: normal;font-stretch: normal;}
+	.itSimple .itFour .tContent1{width: 100%;background: #3d3f41;}
+    .itSimple .itFour .left{width:1200px;margin:0 auto;display: flex;}
+    .itSimple .itFour .left>li{width: 300px;height: 406px;position:relative;display: flex;flex-direction: column;padding: 90px 0;align-items: center;box-sizing: border-box;}
+    .itSimple .itFour .left>li>i{margin-bottom: 30px;display:inline-block;width: 83px;height: 95px;}
+    .itSimple .itFour .left>li span{margin-bottom: 30px;font-size: 22px;color: #FFFFFF}
+    .itSimple .itFour .left .tuceng{width:300px;height:0;height:406px;overflow:hidden;position:absolute;background-color: rgba(25, 144, 188, 0.8);z-index:10;left:0;bottom:0;display: none;text-align: center;}
+    .itSimple .itFour .left .tuceng i{ display:inline-block;width: 83px;height: 95px;margin-top: 40px;}
+    .itSimple .itFour .left .tuceng h3{font-size:22px;color: #FFFFFF;font-weight: normal;margin: 15px 0 5px;}
+    .itSimple .itFour .left .tuceng p{color: #FFFFFF;font-size: 14px;line-height: 25px;}
+    .itSimple .itFour .left .tuceng .tcTitle{color: #ffffff;font-size: 22px;text-align: center;padding: 46px 0;font-weight:normal;}
+    .itSimple .itFour .left .tuceng .tcCon{display: flex;flex-wrap: wrap;padding: 0 10px;justify-content: space-between;}
+    .itSimple .itFour .left .tuceng .tcCon li{width: 60px;height: 24px;font-size: 12px;text-align:center;color:#fff;margin-bottom:20px;line-height:24px;border: solid 1px #ffffff}
+    .itSimple .itFour .left .tuceng .tcbtn{display:inline-block;left: 105px;font-size:14px;bottom:53px;position:absolute;width: 90px;height: 30px;border: solid 1px #ffffff;text-align: center;line-height: 30px;color:#fff;cursor: pointer;}
+    .itSimple .itFour .left .tuceng .tcbtn:hover{background-color: #ffffff;color: #00b8de;}
+    
+    .itSimple .itFour .right{width:600px;float:left;height:550px;}
+	.itSimple .itFour .right li{position:relative;float:left;width:600px;height:270px;margin-right:10px;margin-bottom:10px;}
+	.itSimple .itFour .right .rightContent1{height:140px;width:180px;position:absolute;left:10px;bottom:0;}
+	.itSimple .itFour .right .rightContent1 h2{font-size:30px;line-height:40px;color:#0069ca;}
+	.itSimple .itFour .right .rightContent1 .rightContent11{font-size:16px;line-height:23px;color:#000;}
+	.itSimple .itFour .right .rightContent1 .rightContent12{font-size:13px;line-height:23px;font-weight: bold;color:#000;}
+	.itSimple .itFour .right .rightContent1 a{margin:10px auto;display:block;background:url(https://p3.lefile.cn/product/adminweb/2018/08/09/923c2db8-f4a9-449d-a328-e30c948b6833.png) no-repeat 0 0;font-size:12px;width:80px;height:30px;line-height:30px;color:#0069ca;text-align: center;}
+	.itSimple .itFour .right .rightContent2{height:200px;width:600px;padding-top:70px;text-align: center;}
+	.itSimple .itFour .right .rightContent2 h2{font-size:30px;line-height:50px;color:#0069ca;}
+	.itSimple .itFour .right .rightContent2 .rightContent11{font-size:18px;line-height:30px;}
+	.itSimple .itFour .right .rightContent2 .rightContent12{font-size:16px;line-height:30px;font-weight: bold;}
+	.itSimple .itFour .right .rightContent2 a{background:url(https://p3.lefile.cn/product/adminweb/2018/08/09/923c2db8-f4a9-449d-a328-e30c948b6833.png) no-repeat 0 0;font-size:12px;width:80px;height:30px;line-height:30px;color:#0069ca;display: block;text-align: center;margin:10px auto;}
+	
+	.itSimple .itFive{width:100%;height:570px;background: #f5f5f6;}
+	.itSimple .itFive .tTtitle{line-height:150px;font-size:36px;font-family:FZLTHJW--GB1-0;font-weight: normal;font-stretch: normal;text-align: center;}
+    .itSimple .itFive .left{position:relative;width:1200px;margin:0 auto;font-size:24px;display: flex;justify-content: space-around;}
+    .itSimple .itFive .left>li{display:flex;flex-direction:column;width: 325px;height: 400px;background: #FFFFFF;box-shadow: 0px 0px 27px 0px rgba(0, 0, 0, 0.1); align-items: center;}
+    .itSimple .itFive .left>li i{width: 61px;height: 61px;margin-top: 40px;margin-bottom: 20px;}
+    .itSimple .itFive .left>li .fiveCon{width: 100%;text-align: center;margin-bottom: 45px; }
+    .itSimple .itFive .left .fiveCon .ts{color: #5c5c5c;font-size: 16px;}
+    .itSimple .itFive .left .fiveCon .span1{font-size: 20px;color: #3b3b3b;line-height: 35px;}
+    .itSimple .itFive .left .fiveCon span{line-height: 28px;}
+    .itSimple .itFive .left .fiveCon .bluespan{font-size: 16px;color: #00b8de;}
+    .itSimple .itFive .left .miaoshu{color: #ff6600;font-size: 20px;margin-bottom: 25px;}
+    .itSimple .itFive .left .fiveljxq{cursor:pointer;font-size:14px;width: 100px;height: 30px;border: solid 1px #525252; color: #353535;text-align: center;line-height: 30px;}
+    .itSimple .itFive .left .fiveljxq:hover{background: #2eb9ed;border: none;color: #FFFFFF;}
+    .itSimple .itFive .leftContent{width:187px;height:135px;position:absolute;left:20px;bottom:0;}
+    .itSimple .itFive .leftContent p{height:83px;line-height:25px;color:#fff;font-size:16px;}
+    .itSimple .itFive .leftContent p span{color:#ffd552;}
+    .itSimple .itFive .leftContent a{margin-top:10px;background:url(https://p3.lefile.cn/product/adminweb/2018/08/09/923c2db8-f4a9-449d-a328-e30c948b6833.png) no-repeat 0 0;font-size:12px;width:80px;height:30px;line-height:30px;color:#0069ca;display: block;text-align: center;}
+    
+	
+.wrapper-05{width:100%height:90px;padding-top:40px;}
+.wrapper{
+    position: relative; margin: 0 auto; max-width: 1150px; min-width: 910px; _width:expression(document.documentElement.clientWidth > 1150 ? "1150px" : ( document.documentElement.clientWidth < 910 ? "910px" : "auto"));
+}
+.section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/*index.css*/
+.people{
+    background-image: url('https://p3.lefile.cn/product/adminweb/2018/04/15/5ed02665-b784-4d1f-853c-fe2887f991a3.png');
+    background-repeat: no-repeat;
+    height: 190px;
+    width: 140px;
+    -webkit-animation: girlRun 1s steps(1,end) infinite;
+    position: absolute;
+    top: 140px;
+    left: 0px;
+    z-index: 2;
+}
+@-webkit-keyframes girlRun{
+    0%{
+        background-position: 0px 0;
+    }
+    12.5%{
+        background-position: -142.875px 0;
+    }
+    25%{
+        background-position: -285.75px 0;
+    }
+    37.5%{
+        background-position: -428.625px 0;
+    }
+    50%{
+        background-position: -571.5px 0;
+    }
+    62.5%{
+        background-position: -714.375px 0;
+    }
+    75%{
+        background-position: -857.25px 0;
+    }
+    87.5%{
+        background-position: -1000.125px 0;
+    }
+    100%{
+        background-position: -1143px 0;
+    }
+}
+
+
+
+
+.people2{
+    background-image: url('https://p3.lefile.cn/product/adminweb/2018/04/15/5ed02665-b784-4d1f-853c-fe2887f991a3.png');
+    background-repeat: no-repeat;
+    height: 190px;
+    width: 140px;
+    -webkit-animation: girlRun2 1s steps(1,end) infinite;
+    position: absolute;
+    top: 130px;
+    left: 0px;
+}
+@-webkit-keyframes girlRun2{
+     0%{
+        background-position: 0px 0;
+    }
+    12.5%{
+        background-position: -142.875px 0;
+    }
+    25%{
+        background-position: -285.75px 0;
+    }
+    37.5%{
+        background-position: -428.625px 0;
+    }
+    50%{
+        background-position: -571.5px 0;
+    }
+    62.5%{
+        background-position: -714.375px 0;
+    }
+    75%{
+        background-position: -857.25px 0;
+    }
+    87.5%{
+        background-position: -1000.125px 0;
+    }
+    100%{
+        background-position: -1143px 0;
+    }
+}
+
+@keyframes ripple {
+	0% {
+		opacity: .3;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes ripple1 {
+	0% {
+        opacity: .3;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes ripple2 {
+	0% {
+        opacity: .3;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.dh1 {
+    -webkit-animation: scale-out-center 0.5s both;
+    animation: scale-out-center 0.5s both;
+}
+	
+
+
+
+@-webkit-keyframes scale-out-center {
+	  0% {
+	    -webkit-transform: scale(0);
+	            transform: scale(0);
+	    opacity: 1;
+	  }
+	  100% {
+	    -webkit-transform: scale(1);
+	            transform: scale(1);
+	    opacity: 1;
+	  }
+	}
+	@keyframes scale-out-center {
+	  0% {
+	    -webkit-transform: scale(0);
+	            transform: scale(0);
+	    opacity: 1;
+	  }
+	  100% {
+	    -webkit-transform: scale(1);
+	            transform: scale(1);
+	    opacity: 1;
+	  }
+	}
+
+
+.section2_top{
+    margin-top: 66px;
+    font-family: FZLTHJW--GB1-0;
+	font-size: 30px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 21px;
+	letter-spacing: 0px;
+	color: #252525;
+	width:1200px;
+	margin:0 auto;
+	height: 90px;
+	position: relative;
+}
+.section2_top span{
+    display: inline-block;
+    width: 3px;
+	height: 17px;
+    background-color: #2eb9ed;
+    margin-right: 10px;
+}
+
+
+.section2_top ul {
+   height:30px;margin:0 auto;
+   padding-right:20px;
+   position: absolute;
+   right: 0;
+   bottom: 0;
+}
+.section2_top ul li{
+	width: 90px;
+	height: 30px;
+	text-align: center;
+	border: solid 1px #000;
+    float: left;
+    font-family: FZLTHJW--GB1-0;
+	font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height:30px;
+	letter-spacing: 0px;
+	color: #1f1f1f;
+    cursor: pointer;
+    margin-left: 10px;
+}
+#putong{
+    cursor: pointer;
+}
+.section2_top .view{
+	font-size:36px;text-align: center;line-height:60px;
+	text-align: center;
+}
+
+.section2_top ul li.act{
+    color: #2eb9ed;
+    border: solid 1px #a8a8a8;
+}
+
+
+
+.red{
+    display: inline-block;
+    border-radius: 50%;
+    border-radius: 50%;
+    border:1px solid #f11526;
+    padding: 2px 3px;
+    cursor: pointer;
+    display: none;
+    -webkit-animation-name:'ripple1';/*动画属性名，也就是我们前面keyframes定义的动画名*/
+	-webkit-animation-duration: 1s;/*动画持续时间*/
+	-webkit-animation-timing-function: ease; /*动画频率，和transition-timing-function是一样的*/
+	-webkit-animation-delay: 0s;/*动画延迟时间*/
+	-webkit-animation-iteration-count: infinite;/*定义循环资料，infinite为无限次*/
+	-webkit-animation-direction: alternate;/*定义动画方式*/
+}
+.red:hover .hiddendiv{
+    display: block;
+}
+
+.redbian{
+    display: inline-block;
+    border-radius: 50%;
+    border:1px solid #f11526;
+    padding: 1px 3px;
+    -webkit-animation-name:'ripple2';/*动画属性名，也就是我们前面keyframes定义的动画名*/
+	-webkit-animation-duration: 1s;/*动画持续时间*/
+	-webkit-animation-timing-function: ease; /*动画频率，和transition-timing-function是一样的*/
+	-webkit-animation-delay: 0s;/*动画延迟时间*/
+	-webkit-animation-iteration-count: infinite;/*定义循环资料，infinite为无限次*/
+	-webkit-animation-direction: alternate;/*定义动画方式*/
+}
+
+
+
+
+.redxin {
+	display: inline-block;
+	width:15px;
+	height:15px;
+	background-color:#f11526;
+	border-radius: 50%;
+	position: relative;
+	top: 1.5px;
+	-webkit-animation-name:'ripple';/*动画属性名，也就是我们前面keyframes定义的动画名*/
+	-webkit-animation-duration: 1s;/*动画持续时间*/
+	-webkit-animation-timing-function: ease; /*动画频率，和transition-timing-function是一样的*/
+	-webkit-animation-delay: 0s;/*动画延迟时间*/
+	-webkit-animation-iteration-count: infinite;/*定义循环资料，infinite为无限次*/
+	-webkit-animation-direction: alternate;/*定义动画方式*/
+	}
+.red .hiddendiv{
+    position: absolute;
+    top: 25px;
+    display: none;
+    width: 250px;
+    background-color: rgba(255,255,255,.7);
+    text-align: center;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.hiddendiv h3{
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 10px;
+    font-family:‘方正’，‘Microsoft Yahei’，‘verdanamsans-serif’; 
+}
+
+
+.hiddencontent{
+    height: 70px;
+}
+.hiddencontent div{
+    float: left;
+}
+.hidden_left{
+    width: 140px;
+    padding: 0 10px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.hidden_right{
+    width: 80px;
+}
+.hidden_right img{
+    width: 70px;
+}
+
+.red .hiddendiv a{
+    display: inline-block;
+    background-color: #ea0009;
+    color: #FFF;
+    padding: 2px 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+
+
+/* 智能会议室 */
+.smallbg2{
+    height: 332px;
+    background: url("https://p3.lefile.cn/product/adminweb/2018/04/15/40301562-994f-46a4-b391-55672e14827e.png");
+    background-size: 100%;
+    position: relative;
+    margin-top: 25px;
+    display: none;
+}
+.smallbg2.smallbg212{
+    background: url("https://p3.lefile.cn/product/adminweb/2018/04/15/40301562-994f-46a4-b391-55672e14827e.png");
+}
+.smallbg2.smallbg212.smallbg221{
+    background: url("https://p3.lefile.cn/product/adminweb/2018/04/15/40301562-994f-46a4-b391-55672e14827e.png");
+}
+.smallbg2.smallbg212.smallbg221.smallbg222{
+    background: url("https://p3.lefile.cn/product/adminweb/2018/04/15/40301562-994f-46a4-b391-55672e14827e.png");
+}
+.smallbg2.smallbg212.smallbg221.smallbg222.smallbg231{
+    background: url("https://p2.lefile.cn/product/adminweb/2018/04/15/1a42464b-8d6b-4c89-94bd-1483e8aff048.png");
+}
+.smallbg2.smallbg212.smallbg221.smallbg222.smallbg231.smallbg232{
+    background: url("https://p1.lefile.cn/product/adminweb/2018/04/15/85e05a7a-e9a6-4b9c-b7c1-014c6fbef484.png");
+}
+
+
+.jiantou21{
+    position: absolute;
+    top: 180px;
+    left: 1000px;
+    display: none;
+    cursor: pointer;
+}
+.jiantou22{
+    position: absolute;
+    top: 180px;
+    left: 1000px;
+    display: none;
+    cursor: pointer;
+}
+
+.quanquan11{
+    position: absolute;
+    top: 170px;
+    left: 330px;
+}
+.quanquan12{
+    position: absolute;
+    top: 170px;
+    left: 490px;
+}
+.quanquan13{
+    position: absolute;
+    top: 140px;
+    left: 630px;
+}
+.quanquan14{
+    position: absolute;
+    top: 90px;
+    right: 180px;
+}
+.quanquan15{
+    position: absolute;
+    top: 170px;
+    left: 190px;
+}
+.quanquan16{
+    position: absolute;
+    top: 180px;
+    left: 370px;
+}
+.quanquan17{
+    position: absolute;
+    top: 160px;
+    left: 750px;
+}
+
+
+
+.quanquan18{
+    position: absolute;
+    top: 120px;
+    left: 200px;
+}
+
+.quanquan19{
+    position: absolute;
+    top: 160px;
+    left: 890px;
+}
+
+
+
+
+
+/* 移动办公 */
+.smallbg3{
+    height: 332px;
+    background: url("https://p3.lefile.cn/product/adminweb/2018/04/15/927e70b7-77d2-4be6-9ad9-b4df96c2f019.png");
+    background-size: 100%;
+    position: relative;
+    margin-top: 25px;
+    display: none;
+}
+.smallbg3.smallbg312{
+    background: url("https://p2.lefile.cn/product/adminweb/2018/04/15/6d701503-90e0-444a-b195-4703ea2f3d43.png");
+}
+
+.smallbg3.smallbg312.smallbg321{
+    background: url("https://p2.lefile.cn/product/adminweb/2018/04/15/bea49da8-fab1-4561-a9c6-acc1ed8a3311.png");
+}
+.smallbg3.smallbg312.smallbg321.smallbg322{
+    background: url("https://p4.lefile.cn/product/adminweb/2018/04/15/1c011ceb-8a5b-429e-bcf2-ab133d86cb74.png");
+}
+.smallbg3.smallbg312.smallbg321.smallbg322.smallbg331{
+    background: url("https://p1.lefile.cn/product/adminweb/2018/04/15/bde612bb-3421-4de2-a14d-3a12b1666ba4.png");
+}
+.smallbg3.smallbg312.smallbg321.smallbg322.smallbg331.smallbg332{
+    background: url("https://p2.lefile.cn/product/adminweb/2018/04/15/25004e5b-e5d8-4efe-b516-6acdb33c42bf.png");
+}
+
+/* 数据中心 */
+.smallbg4{
+    height: 332px;
+    background: url("https://p4.lefile.cn/product/adminweb/2018/04/15/b6a9be81-5ba1-4398-bd90-cce415c79b5f.png");
+    background-size: 100%;
+    position: relative;
+    margin-top: 25px;
+    display: none;
+}
+.smallbg4.smallbg412{
+    background: url("https://p1.lefile.cn/product/adminweb/2018/04/15/88ba01ef-9542-42ec-84f4-9e62368201d1.png");
+}
+.smallbg4.smallbg412.smallbg421{
+    background: url("https://p2.lefile.cn/product/adminweb/2018/04/15/7e6de856-6fd6-4097-8db3-78bee3e10307.png");
+}
+.smallbg4.smallbg412.smallbg421.smallbg422{
+    background: url("https://p2.lefile.cn/product/adminweb/2018/04/15/6e1f1218-488e-44dc-bb48-b347d0ee7d29.png");
+}
+.smallbg4.smallbg412.smallbg421.smallbg422.smallbg431{
+    background: url("https://p3.lefile.cn/product/adminweb/2018/04/15/3362cf78-2949-4060-bf51-6c6adacc5376.png");
+}
+
+
+
+
+.jiantou31{
+    position: absolute;
+    top: 180px;
+    left: 1000px;
+    display: none;
+    cursor: pointer;
+}
+.jiantou32{
+    position: absolute;
+    top: 180px;
+    left: 1000px;
+    display: none;
+    cursor: pointer;
+}
+.jiantou41{
+    position: absolute;
+    top: 180px;
+    left: 1000px;
+    display: none;
+    cursor: pointer;
+}
+.jiantou42{
+    position: absolute;
+    top: 180px;
+    left: 1000px;
+    display: none;
+    cursor: pointer;
+}
+
+.jiantou{
+    position: absolute;
+    top: 180px;
+    left: 1000px;
+    display: none;
+    cursor: pointer;
+}
+.jiantou2{
+    position: absolute;
+    top: 180px;
+    left: 1000px;
+    display: none;
+    cursor: pointer;
+}
+
+.deng{
+    position: absolute;
+    width: 170px;
+    top: 100px;
+    left: 271px;
+    display: none;
+    /* left: 490px;  第二个场景 */
+}
+
+.lou{
+    position: absolute;
+    right: 440px;
+    width: 70px;
+    top: 160px;
+    opacity: 0;
+}
+
+.duihua1{
+    position: absolute;
+    right: 340px;
+    top: 90px;
+    width: 100px;
+    display: none;
+}
+.duihua2{
+    position: absolute;
+    right: 240px;
+    top: 90px;
+    width: 100px;
+    display: none;
+}
+
+
+.bg21{
+    position: absolute;
+    top: 80px;
+    left: 90px;
+    width: 100px;
+    display: none;
+}
+.bg22{
+    position: absolute;
+    top: 100px;
+    left: 190px;
+    display: none;
+}
+.bg23{
+    position: absolute;
+    top: 100px;
+    left: 490px;
+    display: none;
+}
+.bg24{
+    position: absolute;
+    top: 150px;
+    left: 540px;
+    display: none;
+}
+
+
+.bg31{
+    position: absolute;
+    top: 110px;
+    left: 140px;
+    display: none;
+}
+.bg32{
+    position: absolute;
+    top: 90px;
+    right: 220px;
+    display: none;
+}
+.bg33{
+    position: absolute;
+    top: 70px;
+    right: 90px;
+    display: none;
+}
+
+.jingtaibanner{
+    margin-top: 40px;
+    display: none;
+}
+.h5{
+    display: block;
+}
+
+.banner1 { position: relative; overflow: auto; text-align: center;}
+.banner1 li { list-style: none; }
+.banner1 ul li { float: left;position: relative; }
+
+
+#b04 { width: 1150px;
+    display: block;
+}
+#b04 .dots { position: absolute; left: 0; right: 0; bottom: 20px;}
+#b04 .dots li{ 
+	display: inline-block; 
+	width: 10px; 
+	height: 10px; 
+	margin: 0 4px; 
+	text-indent: -999em; 
+	border: 2px solid #fff; 
+	border-radius: 6px; 
+	cursor: pointer; 
+	opacity: .4; 
+	-webkit-transition: background .5s, opacity .5s; 
+	-moz-transition: background .5s, opacity .5s; 
+	transition: background .5s, opacity .5s;
+}
+#b04 .dots li.active {
+	background: #fff;
+	opacity: 1;
+}
+#b04 .arrow { position: absolute; top: 150px;}
+#b04 #al { left: 15px;}
+#b04 #ar { right: 15px;}
+#b04 ul li {
+	width: 1150px;
+	height: 334px;
+}
+
+
+
+
+
+
+
+
+
+#b03 { width: 1150px;
+    display: none;
+}
+#b03 .dots { position: absolute; left: 0; right: 0; bottom: 20px;}
+#b03 .dots li{ 
+	display: inline-block; 
+	width: 10px; 
+	height: 10px; 
+	margin: 0 4px; 
+	text-indent: -999em; 
+	border: 2px solid #fff; 
+	border-radius: 6px; 
+	cursor: pointer; 
+	opacity: .4; 
+	-webkit-transition: background .5s, opacity .5s; 
+	-moz-transition: background .5s, opacity .5s; 
+	transition: background .5s, opacity .5s;
+}
+#b03 .dots li.active {
+	background: #fff;
+	opacity: 1;
+}
+#b03 .arrow { position: absolute; top: 200px;}
+#b03 #al { left: 15px;}
+#b03 #ar { right: 15px;}
+#b03 ul li {
+	width: 1150px;
+	height: 334px;
+}
+
+
+
+#b02 { width: 1150px;
+    display: none;
+}
+#b02 .dots { position: absolute; left: 0; right: 0; bottom: 20px;}
+#b02 .dots li{ 
+	display: inline-block; 
+	width: 10px; 
+	height: 10px; 
+	margin: 0 4px; 
+	text-indent: -999em; 
+	border: 2px solid #fff; 
+	border-radius: 6px; 
+	cursor: pointer; 
+	opacity: .4; 
+	-webkit-transition: background .5s, opacity .5s; 
+	-moz-transition: background .5s, opacity .5s; 
+	transition: background .5s, opacity .5s;
+}
+#b02 .dots li.active {
+	background: #fff;
+	opacity: 1;
+}
+#b02 .arrow { position: absolute; top: 200px;}
+#b02 #al { left: 15px;}
+#b02 #ar { right: 15px;}
+#b02 ul li {
+	width: 1150px;
+	height: 334px;
+}
+
+
+
+#b01 { width: 1150px;
+    display: none;
+}
+#b01 .dots { position: absolute; left: 0; right: 0; bottom: 20px;}
+#b01 .dots li{ 
+	display: inline-block; 
+	width: 10px; 
+	height: 10px; 
+	margin: 0 4px; 
+	text-indent: -999em; 
+	border: 2px solid #fff; 
+	border-radius: 6px; 
+	cursor: pointer; 
+	opacity: .4; 
+	-webkit-transition: background .5s, opacity .5s; 
+	-moz-transition: background .5s, opacity .5s; 
+	transition: background .5s, opacity .5s;
+}
+#b01 .dots li.active {
+	background: #fff;
+	opacity: 1;
+}
+#b01 .arrow { position: absolute; top: 200px;}
+#b01 #al { left: 15px;}
+#b01 #ar { right: 15px;}
+#b01 ul li {
+	width: 1150px;
+	height: 334px;
+}
+
+
+
+
+.redd{
+    display: inline-block;
+    border-radius: 50%;
+    border-radius: 50%;
+    border:1px solid #f11526;
+    padding: 2px 3px;
+    cursor: pointer;
+    display: block;
+}
+.redd:hover .hiddendivv{
+    display: block;
+}
+
+.redbiann{
+    display: inline-block;
+    border-radius: 50%;
+    border:1px solid #f11526;
+    padding: 1px 3px;
+}
+.redxinn {
+	display: inline-block;
+	width:15px;
+	height:15px;
+	background-color:#f11526;
+	border-radius: 50%;
+	position: relative;
+    top: 1.5px;
+}
+
+
+.redd .hiddendivv{
+    position: absolute;
+    top: 25px;
+    display: none;
+    width: 250px;
+    background-color:rgba(255,255,255,0.9) !important;
+    filter:alpha(opacity=90);background-color:#fff;
+    text-align: center;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.hiddendivv h3{
+	position: relative;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 10px;
+    font-family:‘方正’，‘Microsoft Yahei’，‘verdanamsans-serif’; 
+}
+
+
+.hiddencontentt{
+    height: 70px;
+}
+.hiddencontentt div{
+    float: left;
+}
+.hidden_leftt{
+    width: 140px;
+    padding: 0 10px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.hidden_rightt{
+    width: 80px;
+}
+.hidden_rightt img{
+    width: 70px;
+}
+
+.redd .hiddendivv a{
+    display: inline-block;
+    background-color: #ea0009;
+    color: #FFF;
+    padding: 2px 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+
+/* 11定位 */
+.lbt111{
+    position: absolute;
+    top: 170px;
+    left: 330px;
+}
+.lbt112{
+    position: absolute;
+    top: 170px;
+    left: 490px;
+}
+.lbt113{
+    position: absolute;
+    top: 140px;
+    left: 630px;
+}
+.lbt114{
+    position: absolute;
+    top: 90px;
+    left: 928px;
+}
+
+.lbt121{
+    position: absolute;
+    top: 120px;
+    left: 200px;
+}
+.lbt122{
+    position: absolute;
+    top: 160px;
+    left: 890px;
+}
+
+.lbt131{
+    position: absolute;
+    top: 160px;
+    left: 750px;
+}
+.lbt132{
+    position: absolute;
+    top: 120px;
+    left: 200px;
+}
+.lbt133{
+    position: absolute;
+    top: 160px;
+    left: 370px;
+}
+
+
+
+
+
+.lbt10{
+    position: absolute;
+    top: 140px;
+    left: 350px;
+
+}
+.lbt11{
+    position: absolute;
+    top: 155px;
+    left: 470px;
+}
+.lbt12{
+    position: absolute;
+    top: 110px;
+    left: 630px;
+}
+
+.lbt13{
+    position: absolute;
+    top: 170px;
+    left: 480px;
+}
+.lbt14{
+    position: absolute;
+    top: 30px;
+    left: 530px;    
+
+}
+.lbt15{
+    position: absolute;
+    top: 220px;
+    left: 630px;
+}
+.lbt16{
+    position: absolute;
+    top: 190px;
+    left: 680px;
+}
+
+
+
+
+.lbt17{
+    position: absolute;
+    top: 160px;
+    left: 350px;
+}
+.lbt18{
+    position: absolute;
+    top: 190px;
+    left: 430px;
+}
+.lbt19{
+    position: absolute;
+    top: 80px;
+    left: 760px;
+}
+
+
+
+
+
+.lbt20{
+    position: absolute;
+    top: 160px;
+    left: 150px;    
+}
+.lbt21{
+    position: absolute;
+    top: 180px;
+    left: 340px;
+}
+.lbt22{
+    position: absolute;
+    top: 170px;
+    left: 900px;
+}
+.lbt23{
+    position: absolute;
+    top: 120px;
+    left: 290px;
+}
+.lbt24{
+    position: absolute;
+    top: 230px;
+    left: 320px;
+}
+.lbt25{
+    position: absolute;
+    top: 170px;
+    left: 390px;
+}
+
+.lbt26{
+    position: absolute;
+    top: 180px;
+    left: 170px;
+}
+.lbt27{
+    position: absolute;
+    top: 110px;
+    left: 275px;
+}
+.lbt28{
+    position: absolute;
+    top: 180px;
+    left: 580px;
+}
+
+
+.lbt29{
+    position: absolute;
+    top: 175px;
+    left: 365px;
+}
+.lbt30{
+    position: absolute;
+    top: 210px;
+    left: 460px;
+}
+
+
+.lbt31{
+    position: absolute;
+    top: 160px;
+    left: 620px;
+}
+.lbt32{
+    position: absolute;
+    top: 170px;
+    left: 660px;
+}
+.lbt33{
+    position: absolute;
+    top: 170px;
+    left: 780px;
+}
+
+.lbt34{
+    position: absolute;
+    top: 120px;
+    left: 690px;
+
+}
+.lbt35{
+    position: absolute;
+    top: 135px;
+    left: 815px;
+}
+.lbt36{
+    position: absolute;
+    top: 125px;
+    left: 880px;
+}
+
+.h51{
+    height: 531px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    position: relative;
+
+}
+.h52{
+    margin-top: 30px;
+    height: 334px;
+    display: none;
+    width: 100%;
+}
+.h53{
+    margin-top: 30px;
+    height: 334px;
+    display: none;
+    width: 100%;
+}
+.h54{
+    margin-top: 30px;
+    height: 334px;
+    display: none;
+    width: 100%;
+}
+.overh51{width:100%;overflow: hidden;margin:0 auto;position:relative;min-width: 1160px;}
+.nomaxmin {
+    max-width: auto;
+    min-width: auto;
+}
+.h51 {
+    margin-top: 30px;
+    height: 531px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+ .h5_bottom{
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 49px;
+    line-height: 49px;
+    text-align: center;
+    font-size: 18px;
+    color: #e0e1e1;
+    position: absolute;
+    width: 100%;
+    bottom:0;
+    margin:0 auto;
+    z-index:20;
+}
+
+.h5_bottom span{
+    margin-left: 41px;
+    display: inline-block;
+    width: 96px;
+    background-color: #2eb9ed;
+	border-radius: 3px;
+    height: 29px;
+    line-height: 29px;
+    font-size: 14px;
+}
+
+
+.jingtaibanner{
+    position: relative;
+}
+
+.jingtaibanner .h5_bottom{
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 49px;
+    line-height: 49px;
+    text-align: center;
+    font-size: 18px;
+    color: #e0e1e1;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.jingtaibanner .h5_bottom span{
+    margin-left: 41px;
+    display: inline-block;
+    width: 96px;
+    background-color: #2eb9ed;
+	border-radius: 3px;
+    height: 29px;
+    line-height: 29px;
+}
+
+     .six{width:100%;margin-top: 60px;}
+     .six .sContent{width:1200px;margin:0 auto;}
+     .six .sContent .sTitle{font-family:FZLTHJW--GB1-0;font-weight: normal;font-stretch: normal;width:100%;text-align: center;color:#000;line-height:60px;font-size:36px;}
+	 .six .sContent .sDetitle{width:1080px;font-size:18px;line-height:30px;text-align:center;margin:30px 60px;color:#000;}
+	 .six .sContent .sTu{1200px;margin:0 auto;display: flex;justify-content: space-around;flex-wrap: wrap;}
+	 .six .sContent .sTu li{width: 145px;height: 58px;margin: 0 57px;margin-bottom: 55px;background: #f8f8f8;}
+	 .six .sContent .sTu li img{width: 145px;height: 58px;}
+	 .six .sContent  a{width: 140px;height: 40px;line-height:40px;border: solid 1px #00b8de;display:block;margin:0 auto;text-align: center;font-size:16px;color:#00b8de;margin-top: 15px;margin-bottom: 77px;}
+	 .six .dbBanner{width: 100%;height: 140px;position: relative;}
+	 .six .dbBanner img{width: 100%;display: block;}
+	 .six .dbBanner a{position: absolute;width: 100%;height: 140px;left:0;top:0}
+	</style>
+<!--<script src="js/jquery-1.11.0.js"></script>-->
+<!--这个标签为通过egret提供的第三方库的方式生成的 javascript 文件。删除 modules_files 标签后，库文件加载列表将不会变化，请谨慎操作！-->
+<!--modules_files_start-->
+    <script egret="lib" src="libs/modules/egret/egret.min.js"></script>
+    <script egret="lib" src="libs/modules/egret/egret.web.min.js"></script>
+    <script egret="lib" src="libs/modules/game/game.min.js"></script>
+    <script egret="lib" src="libs/modules/res/res.min.js"></script>
+    <script egret="lib" src="libs/modules/eui/eui.min.js"></script>
+    <script egret="lib" src="libs/modules/experimental/experimental.min.js"></script>
+    <script egret="lib" src="libs/modules/tween/tween.min.js"></script>
+    <script egret="lib" src="libs/modules/greensock/greensock.min.js"></script>
+    <script egret="lib" src="libs/modules/weixinapi/weixinapi.min.js"></script>
+    <script egret="lib" src="libs/modules/gesture/gesture.min.js"></script>
+    <script egret="lib" src="libs/modules/mouse/mouse.min.js"></script>
+    <!--modules_files_end-->
+
+<!--这个标签为不通过egret提供的第三方库的方式使用的 javascript 文件，请将这些文件放在libs下，但不要放在modules下面。-->
+<!--other_libs_files_start-->
+<script egret="lib" src="polyfill/promise.min.js"></script>
+<!--other_libs_files_end-->
+
+<!--这个标签会被替换为项目中所有的 javascript 文件。删除 game_files 标签后，项目文件加载列表将不会变化，请谨慎操作！-->
+<!--game_files_start-->
+   <script src="js1/main.min.js"></script>
+    <!--game_files_end-->
+	<body>
+       <div class="bannar">
+      <div class="img">
+            <ul>
+            	 <li style="background:url(https://p2.lefile.cn/product/adminweb/2018/09/18/6d8aebd6-f71a-4f5f-bfc0-446ade16d876.png) no-repeat center center; background-size: cover;z-index:4">
+		          <a href="https://www.baiying.cn/17activity/about.html" target="_blank">
+		          </a>
+	          </li>
+	            <li style="background:url(https://p3.lefile.cn/product/adminweb/2018/09/18/5164828d-e824-4128-8feb-73a2d31bdba4.png) no-repeat center center;background-size: cover;z-index:3">
+		          <a href="https://reg.baiying.cn/auth/v4/login?pmf_group=baiying&pmf_medium=shouyebannerzhuce&pmf_source=Z00004195T000" target="_blank">
+		          </a>
+	          </li>
+	            <li style="background:url(https://p3.lefile.cn/product/adminweb/2018/09/20/9b50dbbd-8cf1-4c1f-a854-26b6e5a8a5a7.png) no-repeat center center; background-size: cover;z-index:2">
+		          <a href="https://www.baiying.cn/ymsx.html?pmf_group=yimaoshanxiu&pmf_medium=yimaoshanxiushouyebanner&pmf_source=Z00004126T000" target="_blank">
+		          </a>
+	          </li>
+            	<li style="background:url(https://p2.lefile.cn/product/adminweb/2018/09/07/84b4049a-001d-49cc-b2d3-edd82f975af6.png) no-repeat center center;background-size:cover;z-index:1">
+		          <a href="https://ezg.lenovo.com.cn/warranty.html?pmf_group=zichanguanlihuodong&pmf_medium=zichanguanlihuodongbaiyingshouye&pmf_source=Z00003979T000" target="_blank">
+		          </a>
+	          </li>
+	         
+            </ul>
+      </div>
+      <div class="nav">
+        <ul>
+        </ul>
+      </div>
+    </div>
+	<div class="mask"></div>
+	<div class="sucessTi">
+		<h2 class="sucess1">提交成功！</h2>
+		<p class="sucess2">您的定制需求已收到，联想IT管家会综合评估后<br/> 在<span>3个工作日内</span>与您联系！ </p>
+		<i class="sClose"></i>
+	</div>
+	<div class="dialog-custom">
+	<form action="" class="forms">
+		<p>
+			<label>电话号码</label> <input disabled="disabled" type="text" name="text" class="telnumber">
+		</p>
+		<p class="cheackCode">
+			<label>手机验证码</label> 
+			<input type="text" name="code" id="code"><span class="time">发送验证码</span>
+		    <i></i>
+		</p>
+		     
+		<p>
+			<label style="letter-spacing:30px;">姓名</label> <input type="text" name="name" id="name">
+		    <i></i>
+		</p>
+		<p>
+			<label>公司名称</label> <input type="company" name="company" id="companyName">
+			<i></i>
+		</p>	
+		<p>
+			<label style="letter-spacing: 30px;">行业</label>
+			<select name="industry" class="industry">
+					<option value="">请选择</option>
+					<option value="0">制造行业</option>
+					<option value="1">家具行业</option>
+					<option value="2">传媒行业 </option>
+					<option value="3">电力、热力、燃气及水生产和供应业</option>
+					<option value="4">建筑业</option>
+					<option value="5">批发和零售业</option>
+					<option value="6">交通运输、仓储和邮政业</option>
+					<option value="7">住宿和餐饮业</option>
+					<option value="8">信息传输、软件和信息技术服务业</option>
+					<option value="9">金融业</option>
+					<option value="10">房地产业</option>
+					<option value="11">租赁和商务服务业</option>
+					<option value="12">科学研究和技术服务业</option>
+					<option value="13">水利、环境和公共设施管理业</option>
+					<option value="14">居民服务、修理和其他服务业</option>
+					<option value="15">教育</option>
+					<option value="16">卫生和社会工作</option>
+					<option value="17">文化、体育和娱乐业</option>
+					<option value="18">公共管理、社会保障和社会组织</option>
+					<option value="19">国际组织</option>
+					<option value="20">其他</option> 
+				</select>
+				<i></i>
+		</p>
+		<p>
+			<label style="letter-spacing:30px;">规模</label>
+			<select name="scale" class="scale">
+								<option value="">请选择</option>
+								<option value="1">50人以下</option>
+								<option value="2">50-200人</option>
+								<option value="3">200-500人</option>
+								<option value="4">500人以上</option>
+			</select>
+			<i></i>
+		</p>
+		<p class="ruanjian">
+			<label>软件类型</label>
+			 <input type="text"  class="softwareKind" placeholder="ERP/OA/CRM/eHR…"/>
+			<i></i>
+		</p>
+		<p class="pcontent">
+			<label>需求详情</label>
+			<textarea name="scale" class="request"></textarea>
+			<i></i>
+		</p>
+	</form>
+	    <div class="choice-btn">
+			<button class="ljdz">立即提交</button>
+			<button class="close">关闭</button>
+		</div>
+	 </div>
+		<div class="itSimple">		
+				<div class="itFrist">
+					<div class="itTable">
+						<ul class="table">
+								<li class="active">
+									
+									<span>买硬件</span>
+								</li>
+								<li>
+									
+									<span>购软件</span>
+								</li>
+								<li>
+									
+									<span>选服务</span>
+								</li>
+								<li>
+									
+									<span>定套餐</span>
+								</li>
+								<li class="last">
+									
+									<span>找管家</span>
+								</li>
+					    </ul>
+					</div>
+					<div class="fristContent">
+						<ul class="Fcontent fActive padLi">
+							<li class="num1">
+								<img src="https://p4.lefile.cn/product/adminweb/2018/07/31/e66e8580-8548-4d6a-a83f-269c8281a13c.png"/>
+								<ul>
+									<li class="Ftitle"><a href="https://s.baiying.cn/?index=267" target="_blank">笔记本</a></li>
+									<li><a href="https://s.baiying.cn/?key=ThinkPad" target="_blank">ThinkPad系列</a></li>
+									<li><a href="https://s.baiying.cn/?key=%E6%98%AD%E9%98%B3" target="_blank">昭阳系列</a></li>
+								</ul>
+								<a href="https://s.baiying.cn/?index=267" target="_blank" class="more">更多</a>
+							</li>
+							<li class="num1">
+								<img src="https://p2.lefile.cn/product/adminweb/2018/07/31/1da95550-116b-445c-be50-48c2ffeb8362.png"/>
+								<ul>
+									<li class="Ftitle"><a href="https://s.baiying.cn/?index=266" target="_blank">台式机和一体机</a></li>
+									<li><a href="https://s.baiying.cn/?key=ThinkCentre%20M" target="_blank">ThinkCentre M系列</a></li>
+									<li><a href="https://s.baiying.cn/?key=%E6%89%AC%E5%A4%A9" target="_blank">扬天M系列</a></li>
+								</ul>
+								<a href="https://s.baiying.cn/?index=266" target="_blank" class="more">更多</a>
+							</li>
+							<li class="num1">
+								<img src="https://p1.lefile.cn/product/adminweb/2018/07/31/3e23c5b9-79ff-4ca2-9d58-d986e9ed9a46.png"/>
+								<ul>
+									<li class="Ftitle"><a href="https://s.baiying.cn/?index=268" target="_blank">服务器  </a></li>
+									<li><a href="https://s.baiying.cn/?key=SR" target="_blank">ThinkSystem</a></li>
+									<li><a href="https://s.baiying.cn/?key=RS" target="_blank">ThinkSever</a></li>
+								</ul>
+								<a href="https://s.baiying.cn/?index=268" target="_blank" class="more">更多</a>
+							</li>
+							<li class="num1">
+								<img src="https://p3.lefile.cn/product/adminweb/2018/07/31/49ce81cf-7b68-450d-84d2-62c52597f095.png"/>
+								<ul>
+									<li class="Ftitle"><a href="https://s.baiying.cn/?key=%E5%B9%B3%E6%9D%BF" target="_blank">平板电脑 </a></li>
+									<li><a href="https://s.baiying.cn/?key=TAB3" target="_blank">TAB3</a></li>
+									<li><a href="https://s.baiying.cn/?key=TAB4" target="_blank">TAB4</a></li>
+								</ul>
+								<a href="https://s.baiying.cn/?key=%E5%B9%B3%E6%9D%BF" target="_blank" class="more">更多</a>
+							</li>
+							<li class="num1">
+								<img src="https://p3.lefile.cn/product/adminweb/2018/07/31/0d6965ba-dfba-4455-a29c-cfa75d3a5828.png"/>
+								<ul>
+									<li class="Ftitle"><a href="https://s.baiying.cn/?key=%E5%B7%A5%E4%BD%9C%E7%AB%99" target="_blank">工作站</a></li>
+									<li><a href="https://s.baiying.cn/?key=%E5%B7%A5%E4%BD%9C%E7%AB%99" target="_blank">ThinkStation</a></li>
+									<li><a href="https://s.baiying.cn/?key=%E7%A7%BB%E5%8A%A8%E5%B7%A5%E4%BD%9C%E7%AB%99" target="_blank">移动工作站</a></li>
+								</ul>
+								<a href="https://s.baiying.cn/?key=%E5%B7%A5%E4%BD%9C%E7%AB%99" target="_blank" class="more">更多</a>
+							</li>
+							<li class="num1">
+								<a href="" target="" class="tu"><img src="https://p2.lefile.cn/product/adminweb/2018/07/31/523347b2-e386-44fe-9413-5a45489b32d9.png"/></a>
+								<ul>
+									<li class="Ftitle"><a href="https://s.baiying.cn/?index=269" target="_blank">网络和外设</a> </li>
+									<li><a href="https://www.baiying.cn/17activity/housekeeper.html" target="_blank">路由器</a></li>
+									<li><a href="https://s.baiying.cn/?key=Ne1032" target="_blank">交换机</a></li>
+								</ul>
+								<a href="https://s.baiying.cn/?index=269" target="_blank" class="more">更多</a>
+							</li>
+						</ul>
+					    <ul class="Fcontent">
+					    	<li class="num2">
+								<img class="tu" src="https://p3.lefile.cn/product/adminweb/2018/07/31/4718015f-d4dd-4d18-87b4-e2e3fb6db0ad.png"/>
+								<ul>
+									<li class="Ftitle"><a>ERP</a></li>
+									<li><a> 畅捷通</a></li>
+									<li><a>金蝶</a></li>
+									<li><a>oracle net suite</a></li>
+								</ul>
+							</li>
+							<li class="num2">
+								<img class="tu" src="https://p2.lefile.cn/product/adminweb/2018/07/31/1abddc5b-d9be-4499-9912-281eb1355600.png"/>
+								<ul>
+									<li class="Ftitle"><a>OA</a></li>
+									<li><a>云之家</a></li>
+									<li><a>今目标</a></li>
+									<li><a>明道</a></li>
+								</ul>
+							</li>
+							<li class="num2">
+								<img class="tu" src="https://p3.lefile.cn/product/adminweb/2018/07/31/1205816f-c336-4b47-9dba-e8ca0bb72e18.png"/>
+								<ul>
+									<li class="Ftitle"><a>CRM</a></li>
+									<li><a>销售易 </a></li>
+									<li><a>纷享销客</a></li>
+									<li><a>红圈营销</a></li>
+								</ul>
+							</li>
+							<li class="num2">
+								<img class="tu" src="https://p2.lefile.cn/product/adminweb/2018/07/31/526df7a1-02e2-4d11-9830-5e2755f30288.png"/>
+								<ul>
+									<li class="Ftitle"><a> 云客服   </a></li>
+									<li><a>小能 </a></li>
+									<li><a>智齿客服</a></li>
+									<li><a>Udesk</a></li>
+								</ul>
+							</li>
+							<li class="num2">
+								<img class="tu" src="https://p4.lefile.cn/product/adminweb/2018/07/31/ced798a3-b03b-46ca-9b03-6f38430612cd.png"/>
+								<ul>
+									<li class="Ftitle"><a>营销   </a></li>
+									<li><a>致趣·百川</a></li>
+									<li><a>赛诺贝斯</a></li>
+									<li><a>营销实验室</a></li>
+								</ul>
+							</li>
+							<li class="num2">
+								<img class="tu" src="https://p3.lefile.cn/product/adminweb/2018/07/31/58dde2de-8019-44fe-b56b-3f4ab3346caa.png"/>
+								<ul>
+									<li class="Ftitle"><a href="" target="_blank">资产办公软件 </a></li>
+									<li><a>Office365</a></li>
+									<li><a>WPS</a></li>
+									<li><a>百应资产管理</a></li>
+								</ul>
+							</li>
+							<li class="num21">
+								<img class="tu" src="https://p3.lefile.cn/product/adminweb/2018/07/31/168429fa-af34-4bf5-bf60-f057c801f94b.png"/>
+								<ul>
+									<li class="Ftitle"><a>网站开发</a></li>
+								</ul>
+							</li>
+							<li class="num21">
+								<img class="tu" src="https://p3.lefile.cn/product/adminweb/2018/07/31/ffab9cbd-5b03-42bc-bf2a-879059e9acd9.png"/>
+								<ul>
+									<li class="Ftitle"><a>APP制定</a></li>
+								</ul>
+							</li>
+							<li class="num21">
+								<img class="tu" src="https://p3.lefile.cn/product/adminweb/2018/07/31/b246edfe-c168-4874-97f7-05d72b6d5cd9.png"/>
+								<ul>
+									<li class="Ftitle"><a>微信小程序</a></li>
+								</ul>
+							</li>
+							<li class="num21">
+								<img class="tu" src="https://p3.lefile.cn/product/adminweb/2018/07/31/d67c0b5b-c62e-45eb-83a5-f865274a4790.png"/>
+								<ul>
+									<li class="Ftitle"><a>软件设计</a></li>
+								</ul>
+							</li>
+							<li class="num21">
+								<img class="tu" src="https://p3.lefile.cn/product/adminweb/2018/07/31/c9257a78-7e7f-44dc-af55-04f4086bf881.png"/>
+								<ul>
+									<li class="Ftitle"><a>产品设计</a></li>
+								</ul>
+							</li>
+							<li class="num21">
+								<img class="tu" src="https://p2.lefile.cn/product/adminweb/2018/07/31/3ba9c0f2-a5fd-47bc-827e-8f9d50da8ca6.png"/>
+								<ul>
+									<li class="Ftitle"><a>更多</a></li>
+								</ul>
+							</li>
+					    </ul>
+					    <ul class="Fcontent">
+					     	<li class="num3">
+								<img class="tu" src="https://p2.lefile.cn/product/adminweb/2018/09/07/81cc2d11-a67b-4241-a5b1-9be2d1dd0606.png"/>
+								<ul>
+									<li class="Ftitle"><a class="num13">方案规划 </a></li>
+									<li class="num">
+										<a>云计算<br/>虚拟化<br />信息安全<br/>高效存储</a>
+									</li>
+								</ul>
+							</li>
+							<li class="num3">
+								<img class="tu" src="https://p3.lefile.cn/product/adminweb/2018/09/07/cf73fc10-7a53-46c0-a9c6-872d31e79ea3.png"/>
+								<ul>
+									<li class="Ftitle"><a class="num13">安装部署 </a></li>
+									<li class="num">
+										<a>办公电脑安装部署 <br/>机房服务器安装部署<br />网络设备安装部署<br/>其他设备安装部署</a>
+									</li>
+									
+								</ul>
+							</li>
+							<li class="num3">
+								<img class="tu" src="https://p2.lefile.cn/product/adminweb/2018/09/07/0d97a0b1-d215-4aaa-9adb-760ad938b5a1.png"/>
+								<ul>
+									<li class="Ftitle"><a class="num13" href="https://www.baiying.cn/17activity/itmaintenance.html" target="_blank">运维支持 </a></li>
+									<li class="num">
+										<a>基础运维包 <br/>高级运维包<br />定制运维包 <br/>大牛驻场服务</a>
+									</li>
+								</ul>
+							</li>
+							
+					     </ul>
+					    <ul class="Fcontent tcLi">
+					      	<li class="num4" style="margin-top:0">
+					      		<p>套餐1</p>
+					      		<img src="https://p3.lefile.cn/product/adminweb/2018/09/07/c9217d49-79d1-4256-92d9-1c6c2b2c92f1.png">
+					      		<a href="http://crm2.qq.com/page/portalpage/wpa.php?uin=4009868999&aty=0&a=0&curl=&ty=1" target="_blank"></a>
+					      	</li>
+					      	<li class="num4">
+					      		<p>套餐2</p>
+					      		<img src="https://p2.lefile.cn/product/adminweb/2018/09/07/8adfadd9-a7e6-413d-a63c-d75975e317d1.png">
+					      		<a href="http://crm2.qq.com/page/portalpage/wpa.php?uin=4009868999&aty=0&a=0&curl=&ty=1" target="_blank"></a>
+					      	</li>
+					      	<li class="num4">
+					      		<p>套餐3</p>
+					      		<img src="https://p2.lefile.cn/product/adminweb/2018/09/07/29fe41ac-e876-4c23-8160-66034bdb2d17.png">
+					      		<a href="http://crm2.qq.com/page/portalpage/wpa.php?uin=4009868999&aty=0&a=0&curl=&ty=1" target="_blank"></a>
+					      	</li>
+					      </ul>
+					    <ul class="Fcontent fristTop">
+					    <a  class="di4" href="http://crm2.qq.com/page/portalpage/wpa.php?uin=4009868999&aty=0&a=0&curl=&ty=1" target="_blank">
+						   	<li class="num5">
+						   		<img src="https://p4.lefile.cn/product/adminweb/2018/09/07/8d8688cc-e7f1-45e1-b629-b272ca2aab7d.png"/>
+						   	</li>
+						   	<li class="num6">
+						   		<p class="num61">联想IT管家<br />金牌买手服务</p>
+						   		<p class="num62"><span>1对1</span>绑定<br />助力企业信息化<span>升级</span>  </p>
+						   		<p class="num63">
+						   			<span class="psn1">选型/采购 <br/>IT产品</span>
+						   			<span class="psn2">获取最大<br/>优惠折扣</span>
+						   			<span class="psn3">定制IT<br/>解决方案</span>
+						   			<span class="psn4">输送行业<br/>趋势报告 </span>
+						   		</p>
+						   	</li>
+					   	</a>
+					   </ul>
+					</div>
+				    
+				</div>
+		        <div class="itSecond">
+		        	<div class="sContent itsActive">
+		        		<div class="sCon">
+			        		<h2 class="left">一键领取，4800元购机优惠券</h2>
+			        		<div class="right">
+			        			<div class="write">
+			        				<input class="telphone" type="text" placeholder="输入手机号" />
+			        			    <a href="javascript:;" class="btn" dataId="11">立即领取</a>
+			        			</div>
+			        		</div>
+		        		</div>
+		        	</div>
+		        	<div class="sContent">
+		        		<div class="sCon">
+			        		<h2 class="left">一键申请，<sapn style="color:#ffae2f">12种</sapn>软件免费体验</h2>
+			        		<div class="right">
+			        			<div class="write">
+			        				<input class="telphone" type="text" placeholder="输入手机号" />
+			        			    <a href="javascript:;" class="btn" dataId="12">立即申请</a>
+			        			</div>
+			        		</div>
+			        	</div>
+		        	</div>
+
+		        	<div class="sContent">
+		        		<div class="sCon">
+			        		<h2 class="left">
+			        	                    免费申请一站式售后服务
+			        		</h2>
+			        		<div class="right">
+			        			<div class="write">
+			        				<input class="telphone" type="text" placeholder="输入手机号" />
+			        			    <a href="javascript:;" class="btn" dataId="13">立即申请</a>
+			        			</div>
+			        		</div>
+			        	</div>
+		        	</div>
+		        	<div class="sContent">
+		        		<div class="sCon">
+			        		<h2 class="left"><sapn style="color:#ffae2f">定制</sapn>企业一站式套餐，专享大客户<sapn style="color:#ffae2f">折扣</sapn></h2>
+			        		<div class="right">
+			        			<div class="write">
+			        				<input class="telphone" type="text" placeholder="输入手机号" />
+			        			    <a href="javascript:;" class="btn" dataId="14">免费申请</a>
+			        			</div>
+			        		</div>
+			        	</div>
+		        	</div>
+		        	<div class="sContent">
+		        		<div class="sCon">
+			        		<h2 class="left">免费尊享专职买手服务</h2>
+			        		<div class="right">
+			        			<div class="write">
+			        				<input class="telphone" type="text" placeholder="输入手机号" />
+			        			    <a href="javascript:;" class="btn" dataId="15">立即领取</a>
+			        			</div>
+			        		</div>
+			        	</div>
+		        	</div>
+		        </div>
+		        <div class="itThree">
+		        	<h2 class="tTtitle">爆款商用硬件</h2>
+		        		<div class="left">
+		        			<div class="left1">百应星期五 会员福利日 </div>
+		        			<div class="left2">
+		        				<h2>每月第二个星期五   会员专享四重福利</h2>
+		        				<p>·<span>8888元</span>神券·首单<span>立减</span>千元·<span>1积分</span>秒杀好礼·<span>免费申请</span>金牌服务</p> 
+		        			</div>
+		        			<a href="https://www.baiying.cn/17activity/month.html?pmf_group=baiyingxingqiwu&pmf_medium=baiyingxingqiwubaiyingshouye&pmf_source=Z00003767T000" target="_blank">了解详情</a>
+		        		 </div>
+		        		<div class="right">
+		        			<ul>
+		        				<li>
+		        					<a href="https://shop.baiying.cn/pd/101392.html" target="_blank">
+		        						<img src="https://p3.lefile.cn/product/adminweb/2018/08/09/1e43a900-d2ab-453c-88e7-56ff7f802356.png"/>
+		        						<p class="rTitle">ThinkPad L380 </p>
+		        						<p class="rDetaile">灵动坚实，轻薄有型</p>
+		        						<p class="rPrice">7190.00元</p>
+		        					</a>
+		        				</li>
+		        				<li>
+		        					<a href="https://shop.baiying.cn/pd/101602.html" target="_blank">
+		        						<img src="https://p4.lefile.cn/product/adminweb/2018/08/09/c8527513-556f-4b00-88f8-6fb9ac2dc184.png"/>
+		        						<p class="rTitle">ThinkPad T480s </p>
+		        						<p class="rDetaile">轻薄有型，强效办公</p>
+		        						<p class="rPrice">8999.00元</p>
+		        					</a>
+		        				</li>
+		        				<li>
+		        					<a href="https://shop.baiying.cn/pd/102219.html" target="_blank" style="margin-bottom: none;">
+		        						<img style="width:175px;margin:0 60px" src="https://p1.lefile.cn/product/adminweb/2018/08/09/61e0d92a-ff1f-46ef-9801-56dfdf4afb62.png"/>
+		        						<p class="rTitle">ThinkCentre M818z</p>
+		        						<p class="rDetaile">高效节能，安全可靠</p>
+		        						<p class="rPrice">7609.00元</p>
+		        					</a>
+		        				</li>
+		        				<li>
+		        					<a href="https://shop.baiying.cn/pd/96260.html" target="_blank" style="margin-bottom: none;">
+		        						<img  src="https://p3.lefile.cn/product/adminweb/2018/08/09/b4a735b0-7cbb-49b5-856e-eda6b11f80f2.png"/>
+		        						<p class="rTitle">启天M415 </p>
+		        						<p class="rDetaile">更小机型，安全易用</p>
+		        						<p class="rPrice">3499.00元</p>
+		        					</a>
+		        				</li>
+		        			</ul>
+		        		</div>
+		        </div>
+		        <div class="itFour">
+		        	<h2 class="tTtitle">热门企业软件</h2>
+		        	<div class="tContent1">
+		        		<ul class="left">
+		        			<li class="liHover" style="background: url(https://p4.lefile.cn/product/adminweb/2018/09/06/7f917777-3994-40a7-84de-ae735771de06.png);">
+		        				<i><img src="https://p3.lefile.cn/product/adminweb/2018/09/14/c8648b9a-398d-4d8a-bdb0-0adb7aa42e01.png" alt="" /></i>
+		        				<span>定制软件</span>
+		        				<div class="tuceng">
+		        					<h4 class="tcTitle">定制软件</h4>
+		       					<ul class="tcCon">
+		        				<li>管理软件</li>
+		        				<li>订单系统</li>
+		        				<li>财务管理</li>
+		        				<li>ERP系统</li>
+		        				<li>行业软件</li>
+		        				<li>金融贸易</li>
+		        				<li>工业控制 </li>
+		        				<li>教育教学</li>
+		        				<li>工具软件</li>
+		        				<li>智能软件</li>
+		        				<li>营销工具</li>
+		        				<li>数据工具 </li>
+		        				<li>软件服务 </li>
+		        				<li>软件开发</li>
+		        				<li>软件升级 </li>
+		        				<li>功能测试</li>
+		        				</ul>
+		        				<a class="tcbtn" target="_blank" href="http://crm2.qq.com/page/portalpage/wpa.php?uin=4009868999&aty=0&a=0&curl=&ty=1">立即定制</a>
+		        			</div>
+		        			</li>
+		        			<li class="liHover" style="background: url(https://p3.lefile.cn/product/adminweb/2018/09/06/41bd1e2b-2ee5-4d39-bdb8-2fc3f65bdb32.png);">
+		        				<i><img src="https://p2.lefile.cn/product/adminweb/2018/09/14/04ff093f-87fa-4411-8adf-f6808504422b.png" alt="" /></i>
+		        				<span>百应资产管理</span>
+		        				<div class="tuceng">
+		        				<i><img src="https://p2.lefile.cn/product/adminweb/2018/09/14/04ff093f-87fa-4411-8adf-f6808504422b.png" alt="" /></i>
+		       					<h3>百应资产管理</h3>
+		       					<p>固定资产全生命周期管理</p>
+		       					<p>资产管理 不限个数  永久免费</p>
+		        				<a class="tcbtn"target="_blank" href="https://ezg.lenovo.com.cn/?pmf_group=zichanguanli&pmf_medium=zichanguanliremenruanjian&pmf_source=Z00004141T000">免费体验</a>
+		        			</div>
+		        			</li>
+		        			<li class="liHover" style="background: url(https://p3.lefile.cn/product/adminweb/2018/09/06/c7e5281a-8d99-4a8f-a5e3-c0d0e4e9f907.png);">
+		        				<i><img src="https://p2.lefile.cn/product/adminweb/2018/09/14/0f39ef25-cebf-487d-a037-68ce78a6d684.png" alt="" /></i>
+		        				<span>销售易</span>
+		        				<div class="tuceng">
+		        				<i><img src="https://p2.lefile.cn/product/adminweb/2018/09/14/0f39ef25-cebf-487d-a037-68ce78a6d684.png" alt="" /></i>
+		       					<h3>销售易</h3>
+		       					<p>智能化的移动CRM云平台</p>
+		       					<p>成就优质客户关系</p>
+		        				<a class="tcbtn" target="_blank" href="http://crm2.qq.com/page/portalpage/wpa.php?uin=4009868999&aty=0&a=0&curl=&ty=1">免费体验</a>
+		        			</div>
+		        			</li>
+		        			<li class="liHover" style="background: url(https://p2.lefile.cn/product/adminweb/2018/09/06/0ed739c3-0f4e-4e88-b719-f6b4a3d013e9.png);">
+		        				<i><img src="https://p3.lefile.cn/product/adminweb/2018/09/14/146d6371-dd7e-4bc9-aec1-a77de67fbbd4.png" alt="" /></i>
+		        				<span>今目标</span>			
+		        				<div class="tuceng">
+		        				<i><img src="https://p3.lefile.cn/product/adminweb/2018/09/14/146d6371-dd7e-4bc9-aec1-a77de67fbbd4.png" alt="" /></i>
+		       					<h3>今目标</h3>
+		       					<p>20+沟通协同工具，按需自由组合</p>
+		       					<p>移动办公，让协作随时随地</p>
+		        				<a class="tcbtn" target="_blank" href="http://jingoal.com/lp/jin/jin.htm?origin=jin04">免费体验</a>
+		        			</div>
+		        			</li>
+		        		</ul>
+		        	</div>
+		        </div>
+		        <div class="itFive">
+		        	<h2 class="tTtitle"> 畅销企业服务</h2>
+		        	<div class="tContent">
+		        		<ul class="left">
+		        			<li>
+		        				<i><img src="https://p3.lefile.cn/product/adminweb/2018/09/07/77a7e1c3-8810-4620-8129-a90432695bbd.png" alt="" /></i>
+		        				<p class="fiveCon"><span class="span1">联想1毛闪修服务</span><br><span class="ts">全面解决企业IT运维问题</span><br><span class="bluespan">多、快、好、省</span><br/><span class="ts">全年无限次服务</span></p>
+		        				<div class="miaoshu">每台每天低至1毛钱</div>
+		        				<a class="fiveljxq" target="_blank" href="https://shop.baiying.cn/pd/105663.html?pmf_group=yimaoshanxiu&pmf_medium=yimaoshanxiushouyebanner&pmf_source=Z00003635T000">了解详情</a>
+		        			</li>
+		        			<li>
+		        				<i><img src="https://p2.lefile.cn/product/adminweb/2018/09/07/bc116f09-050d-4a73-9181-a9ec74f57de0.png" alt="" /></i>
+		        				<p class="fiveCon"><span class="span1">一站式金牌售后服务</span><br><span class="bluespan">1个电话解决所有IT设备售后问题</span><br/><span class="ts">不限品牌，不限品类<br />不中转，专家直接接线</span></p>
+		        				<div class="miaoshu">问题解决率100%</div>
+		        				<a class="fiveljxq" target="_blank" href="https://www.baiying.cn/17activity/aftersale.html">了解详情</a>
+		        			</li>
+		        			<li>
+		        				<i><img src="https://p2.lefile.cn/product/adminweb/2018/09/07/a517472e-2902-4d44-bcd8-264086ef75b3.png" alt="" /></i>
+		        				<p class="fiveCon"><span class="span1">定制化顾问服务</span><br><span class="bluespan">个性化指导企业IT建设</span><br/><span class="ts">如年度方案定制，项目驻场指导<br />高端IT人才培训等</span></p>
+		        				<div class="miaoshu">按需付费</div>
+		        				<a class="fiveljxq" href="http://crm2.qq.com/page/portalpage/wpa.php?uin=4009868999&aty=0&a=0&curl=&ty=1" target="_blank">了解详情</a>
+		        			</li>
+		        		</ul>
+		        	</div>
+		        </div>
+		</div>
+	    <!--第三屏-->
+    <div class="wrapper-05" id="three">
+        <div class="section2_top clearfix">
+        	<div class="view">百应场景体验馆</div>
+            <ul>
+                <li class="act" id="putong">普通办公区</li>
+                <li id="zhineng">智能会议室</li>
+                <li id="yidong">移动办公</li>
+                <li id="shuju">数据中心</li>
+            </ul>
+            <div class="jiqi jiqi-00"></div>
+        </div>
+    </div>
+
+
+    <!-- 轮播图  -->
+    <div class="jingtaibanner wrapper">
+        <div class="banner" id="b04">
+            <ul>
+                <li style="background:url(https://p3.lefile.cn/product/adminweb/2018/04/15/5933e0ed-5a58-4d30-a05c-40f31a2f8e5a.png)">
+                    <span class="redd lbt111">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>行业平板</h3>
+                            <h3 style="margin-top:5px;">TAB3 10 PLUS TB3-X70F</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    商务平板，明智之选，为提升效率而生
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p2.lefile.cn/product/adminweb/2018/04/15/ce807aad-2189-4c24-9ab8-b6b9f25c6df2.jpg" alt="">
+                                </div>
+                            </div>
+                            <a href="https://shop.baiying.cn/pd/101566.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+                    <span class="redd lbt113">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>ThinkCentre M818z</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    商务旗舰，性能强劲，精英之选
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p2.lefile.cn/product/adminweb/2018/04/15/ce807aad-2189-4c24-9ab8-b6b9f25c6df2.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <a href="https://shop.baiying.cn/pd/98643.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+                    <span class="redd lbt114">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>网络云管家</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    员工扫码打卡，让考勤更安全高效
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p3.lefile.cn/product/adminweb/2018/04/15/cbf2b460-4359-4d0f-a93e-0215b1cdff91.jpg" alt="">
+                                </div>
+                            </div>
+                            <a href="https://shop.baiying.cn/pd/101566.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+
+
+
+                </li>
+                <li style="background:url(https://p2.lefile.cn/product/adminweb/2018/04/15/fad3cae4-bc7f-4d71-8325-7de6953a32b7.png)">
+                    <span class="redd lbt121">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>启天A7400</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    简约大方，商务主流，高效一体
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p2.lefile.cn/product/adminweb/2018/04/15/ef20addf-2dd3-49be-8195-2817e3233982.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <a href="https://shop.baiying.cn/pd/58550.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+                    <span class="redd lbt122">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>ThinkPad T480</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    商务轻薄，强劲性能，精锐设计，为之澎湃
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p3.lefile.cn/product/adminweb/2018/04/15/410e2fab-a047-4a07-b609-320a2b639a10.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <a href="https://shop.baiying.cn/pd/101576.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+                </li>
+                <li style="background:url(https://p4.lefile.cn/product/adminweb/2018/04/15/4a9ac3c5-bba4-4545-8ef0-84e948e0cce3.png)">
+                    <span class="redd lbt132">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>ThinkPad T580</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    大屏幕，新性能，运算帷幄
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p3.lefile.cn/product/adminweb/2018/04/15/8e7545ee-4773-4902-98e2-acd5f7b3066f.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <a href="https://shop.baiying.cn/pd/101616.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+                    <span class="redd lbt131">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>网络云管家</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    企业级智能AC网关，高性能，可接入多种企业服务
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p4.lefile.cn/product/adminweb/2018/04/15/297587d3-26a0-4b85-b5f1-f298f9e21072.png" alt="">
+                                </div>
+                            </div>
+                            <a href="https://www.baiying.cn/17activity/housekeeper.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+                    <span class="redd lbt133">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>ThinkPad 超级本时尚手提电脑包</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    时尚外观搭配ThinkPad标识，经典红点拉链头
+
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p2.lefile.cn/product/adminweb/2018/04/15/1c1244d3-1ee0-4177-8637-2fd2e5607270.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <a href="https://shop.baiying.cn/pd/1322.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+                </li>
+            </ul>
+             <a href="javascript:void(0);" class="unslider-arrow04 prev">
+                <img class="arrow" id="al" src="https://p4.lefile.cn/product/adminweb/2018/04/15/b8635843-98fe-4387-88d7-d5eaecc589df.png" alt="prev" width="20" height="35">
+            </a>
+            <a href="javascript:void(0);" class="unslider-arrow04 next">
+                <img class="arrow" id="ar" src="https://p3.lefile.cn/product/adminweb/2018/04/15/ffecdd02-06b0-4640-b164-e4dc2ae18f6c.png" alt="next" width="20" height="37">
+            </a>
+        </div>
+        <div class="banner" id="b03">
+            <ul>
+                <li style="background:url(https://p4.lefile.cn/product/adminweb/2018/04/15/d576c2d6-4e6f-45db-bc57-df0f9a8340b4.png)">
+                    <span class="redd lbt10">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>启天M415</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    外观小巧，性能强劲，办公之选
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p3.lefile.cn/product/adminweb/2018/04/15/8378db89-6b89-4f57-a62c-7260ca693d1c.jpg" alt="">
+                                </div>
+                            </div>
+                            <a href="https://shop.baiying.cn/pd/96260.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+                    <span class="redd lbt11">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>ThinkPad T480s</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    薄揽全局，稳操胜券，轻装出击，行情尽收眼底。
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p3.lefile.cn/product/adminweb/2018/04/15/e9732f4a-8626-428e-a18c-f0c3aa947b58.jpg" alt="">
+                                </div>
+                            </div>
+                            <a href="https://shop.baiying.cn/pd/101602.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+
+
+                </li>
+                <li style="background:url(https://p3.lefile.cn/product/adminweb/2018/04/15/53236629-e191-493b-9fcb-7169a9567dcd.png)">
+                    <span class="redd lbt15">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>ThinkCentre M710q</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    1L超小机箱，小巧灵便，简约办公
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p2.lefile.cn/product/adminweb/2018/04/15/8e60f39b-9105-460e-92c5-bc67674fd453.jpg" alt="">
+                                </div>
+                            </div>
+                            <a href="https://shop.baiying.cn/pd/94928.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+
+                </li>
+                <li style="background:url(https://p1.lefile.cn/product/adminweb/2018/04/15/6fa44e48-06bb-42d7-bcb4-7d2cc4c08276.png)">
+                    <span class="redd lbt17">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>ThinkPad L480</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    经典传承，品质保障，定制化轻薄商务笔记本。
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p2.lefile.cn/product/adminweb/2018/04/15/919ef30e-4ad4-4628-9cbd-fa8e8716c1e9.jpg" alt="">
+                                </div>
+                            </div>
+                            <a href="https://shop.baiying.cn/pd/101636.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+
+                </li>
+            </ul><ul>
+                <li style="background:url(https://p4.lefile.cn/product/adminweb/2018/04/15/d576c2d6-4e6f-45db-bc57-df0f9a8340b4.png)">
+                    <span class="redd lbt10">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>启天M415</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    外观小巧，性能强劲，办公之选
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p3.lefile.cn/product/adminweb/2018/04/15/8378db89-6b89-4f57-a62c-7260ca693d1c.jpg" alt="">
+                                </div>
+                            </div>
+                            <a href="https://shop.baiying.cn/pd/96260.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+                    <span class="redd lbt11">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>ThinkPad T480s</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    薄揽全局，稳操胜券，轻装出击，行情尽收眼底。
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p3.lefile.cn/product/adminweb/2018/04/15/e9732f4a-8626-428e-a18c-f0c3aa947b58.jpg" alt="">
+                                </div>
+                            </div>
+                            <a href="https://shop.baiying.cn/pd/101602.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+
+
+                </li>
+                <li style="background:url(https://p3.lefile.cn/product/adminweb/2018/04/15/53236629-e191-493b-9fcb-7169a9567dcd.png)">
+                    <span class="redd lbt15">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>ThinkCentre M710q</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    1L超小机箱，小巧灵便，简约办公
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p2.lefile.cn/product/adminweb/2018/04/15/8e60f39b-9105-460e-92c5-bc67674fd453.jpg" alt="">
+                                </div>
+                            </div>
+                            <a href="https://shop.baiying.cn/pd/94928.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+
+                </li>
+                <li style="background:url(https://p1.lefile.cn/product/adminweb/2018/04/15/6fa44e48-06bb-42d7-bcb4-7d2cc4c08276.png)">
+                    <span class="redd lbt17">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>ThinkPad L480</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    经典传承，品质保障，定制化轻薄商务笔记本。
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p2.lefile.cn/product/adminweb/2018/04/15/919ef30e-4ad4-4628-9cbd-fa8e8716c1e9.jpg" alt="">
+                                </div>
+                            </div>
+                            <a href="https://shop.baiying.cn/pd/101636.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+
+                </li>
+            </ul>
+             <a href="javascript:void(0);" class="unslider-arrow03 prev">
+                <img class="arrow" id="al" src="https://p2.lefile.cn/product/adminweb/2018/04/15/483c6c9d-72cb-431e-afcc-b041c7ca8c30.png" alt="prev" width="20" height="35">
+            </a>
+            <a href="javascript:void(0);" class="unslider-arrow03 next">
+                <img class="arrow" id="ar" src="https://p1.lefile.cn/product/adminweb/2018/04/15/2d865840-7b37-4455-acec-f1515a18a518.png" alt="next" width="20" height="37">
+            </a>
+        </div>
+        <div class="banner" id="b02">
+            <ul>
+                <li style="background:url(https://p3.lefile.cn/product/adminweb/2018/04/15/20cbd129-9e5d-4f65-9b44-b0cbe29c2aeb.png)">
+                    <span class="redd lbt29">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>ThinkPad L580</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    轻薄有型，说走就走，细节彰显品质
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p3.lefile.cn/product/adminweb/2018/04/15/a22cc909-f7fd-432f-bc42-6bcd7f16d44b.jpg" alt="">
+                                </div>
+                            </div>
+                            <a href="https://shop.baiying.cn/pd/101219.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+                    <span class="redd lbt30">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>ThinkPad X1 Carbon 2018</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    轻薄多能，长效续航，舒适更有质感
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p4.lefile.cn/product/adminweb/2018/04/15/95b6e029-83ec-4e58-ad00-81a36a33c00a.jpg" alt="">
+                                </div>
+                            </div>
+                            <a href="https://shop.baiying.cn/pd/101987.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+                </li>
+                <li style="background:url(https://p2.lefile.cn/product/adminweb/2018/04/15/c239e59d-a087-4c5f-8455-1b7abd90506c.png)">
+                    <span class="redd lbt31">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>TAB4 8 PLUS TB-8704F</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    全新外观设计，侧边指纹识别
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p2.lefile.cn/product/adminweb/2018/04/15/f157bfda-80ce-4792-8c4c-6d12c5fac2cb.jpg" alt="">
+                                </div>
+                            </div>
+                            <a href="https://shop.baiying.cn/pd/101994.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+
+                    <span class="redd lbt33">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>ThinkPad L380</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    灵动坚实，轻薄有型，用心创造细节。
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p2.lefile.cn/product/adminweb/2018/04/15/6f02e71e-03e0-4f0b-a775-8b1ea0980643.jpg" alt="">
+                                </div>
+                            </div>
+                            <a href="https://shop.baiying.cn/pd/101218.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+                </li>
+                <li style="background:url(https://p3.lefile.cn/product/adminweb/2018/04/15/fa276aa2-b31a-48ce-a33a-18719cb432f9.png)">
+                    <span class="redd lbt34">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>TAB4 8 PLUS TB-8704N</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    全新外观设计，可通话，强劲平板
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p2.lefile.cn/product/adminweb/2018/04/15/64c8a04e-c8ca-412c-a961-f774e706d2ef.jpg" alt="">
+                                </div>
+                            </div>
+                            <a href="https://shop.baiying.cn/pd/101996.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+                    <span class="redd lbt35">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>联想（ThinkPad）原装皮包单肩包</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    舒适便携，用心做工，尽显高端
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p2.lefile.cn/product/adminweb/2018/04/15/4c6a2933-726c-4dc8-9361-add027639fac.jpg" alt="">
+                                </div>
+                            </div>
+                            <a href="https://shop.baiying.cn/pd/316.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+                    <span class="redd lbt36">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>昭阳K42-80</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    急速运行，轻薄体验，微边框，新世界
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p2.lefile.cn/product/adminweb/2018/04/15/85958818-87d7-4619-9f1c-8080c0af9371.jpg" alt="">
+                                </div>
+                            </div>
+                            <a href="https://shop.baiying.cn/pd/101909.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+                </li>
+            </ul>
+           <a href="javascript:void(0);" class="unslider-arrow02 prev">
+                <img class="arrow" id="al" src="https://p4.lefile.cn/product/adminweb/2018/04/15/55322a63-9818-434a-a08f-a1b9d1642a5b.png" alt="prev" width="20" height="35">
+            </a>
+            <a href="javascript:void(0);" class="unslider-arrow02 next">
+                <img class="arrow" id="ar" src="https://p2.lefile.cn/product/adminweb/2018/04/15/655462bd-c45f-4dce-b2af-9f6a66f789c5.png" alt="next" width="20" height="37">
+            </a>
+        </div>
+        <div class="banner" id="b01">
+           <ul>
+                <li style="background:url(https://p3.lefile.cn/product/adminweb/2018/04/15/b288f363-3fce-4ab2-9e3c-1392a434d8cb.png)">
+                    <span class="redd lbt20">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>ThinkSystem SR550</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    流畅运行，管理简易，灵活扩展
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p4.lefile.cn/product/adminweb/2018/04/15/ad1f3815-2e2f-4c35-849e-a3558fe1bb1b.jpg" alt="">
+                                </div>
+                            </div>
+                            <a href="https://shop.baiying.cn/pd/58599.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+                    <span class="redd lbt21">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>ThinkSystem ST550</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    可扩展4U塔式服务器，提供符合您期望的性能
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p3.lefile.cn/product/adminweb/2018/04/15/c50edba9-f87c-4eaf-91b5-ba196467bd0f.jpg" alt="">
+                                </div>
+                            </div>
+                            <a href="https://shop.baiying.cn/pd/58865.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+                    <span class="redd lbt22">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>ThinkSystem NE1032 RackSwitch</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    高性能，开放式云架构，为数据中心设计
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p2.lefile.cn/product/adminweb/2018/04/15/b8539585-d56f-43be-9045-88f42368e181.jpg" alt="">
+                                </div>
+                            </div>
+                            <a href="https://shop.baiying.cn/pd/99701.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+                </li>
+                <li style="background:url(https://p2.lefile.cn/product/adminweb/2018/04/15/cdc00d24-ff72-45df-a7b4-e28a1fc064e1.png)">
+                    <span class="redd lbt23">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>ThinkVision P24i</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    超薄边框，拓宽眼界，灵活设计
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p3.lefile.cn/product/adminweb/2018/04/15/a4b47b9e-9543-463b-9a38-bb88980c61fc.jpg" alt="">
+                                </div>
+                            </div>
+                            <a href="https://shop.baiying.cn/pd/91521.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+                    <span class="redd lbt24">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>ThinkCentre M910t</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    简约商务，只为强悍性能而生
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p4.lefile.cn/product/adminweb/2018/04/15/82a4a772-821b-4697-b0d3-eddffd200c82.jpg" alt="">
+                                </div>
+                            </div>
+                            <a href="https://shop.baiying.cn/pd/98665.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+                    <span class="redd lbt25">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>网络云管家</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    企业级智能AC网关，高性能，可接入多种企业服务
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p3.lefile.cn/product/adminweb/2018/04/15/3da3ea6d-87ed-4957-9fcf-2562fcf4681e.png" alt="">
+                                </div>
+                            </div>
+                            <a href="https://www.baiying.cn/17activity/housekeeper.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+                </li>
+                <li style="background:url(https://p4.lefile.cn/product/adminweb/2018/04/15/fd6d3eaa-0fc2-4616-9528-f7e0190d2448.png)">
+                    <span class="redd lbt26">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>ThinkSystem SR650</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    2U双路服务器，专注性能，稳定灵活
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p3.lefile.cn/product/adminweb/2018/04/15/179f692f-016e-4667-adc7-a0f65bede30f.jpg" alt="">
+                                </div>
+                            </div>
+                            <a href="https://shop.baiying.cn/pd/58862.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+
+                    <span class="redd lbt28">
+                        <span class="redbiann">
+                            <span class="redxinn"></span>
+                        </span>
+                        <div class="hiddendivv">
+                            <h3>ThinkPad P51s</h3>
+                            <div class="hiddencontentt">
+                                <div class="hidden_leftt">
+                                    专业移动工作站，实力出击，薄得出众
+                                </div>
+                                <div class="hidden_rightt">
+                                    <img src="https://p1.lefile.cn/product/adminweb/2018/04/15/8269162c-e631-4dbc-a625-45578072514e.jpg" alt="">
+                                </div>
+                            </div>
+                            <a href="https://shop.baiying.cn/pd/96653.html" target="view_window">了解详情</a>
+                        </div>
+                    </span>
+                </li>
+            </ul>
+            <a href="javascript:void(0);" class="unslider-arrow01 prev">
+                <img class="arrow" id="al" src="https://p1.lefile.cn/product/adminweb/2018/04/15/f26fc893-444f-43e8-9be8-249b578fbc13.png" alt="prev" width="20" height="35">
+            </a>
+            <a href="javascript:void(0);" class="unslider-arrow01 next">
+                <img class="arrow" id="ar" src="https://p2.lefile.cn/product/adminweb/2018/04/15/03befc9e-bba9-46bf-9579-51c8c048f1ed.png" alt="next" width="20" height="37">
+            </a>
+        </div>
+
+
+        <div class="h5_bottom">
+            <p>
+                定制您的智能办公方案
+                <span>
+                    <a href="http://crm2.qq.com/page/portalpage/wpa.php?uin=4009868999&aty=0&a=0&curl=&ty=1" style="color:#FFF;">
+                        点击定制
+                    </a>
+                </span>
+            </p>
+        </div>
+    </div>
+    <!-- 轮播图结束 -->
+    <!-- H5开始 -->
+    <div class="overh51">
+    <div class="h51 nomaxmin">
+     <div style="margin: auto;width:100%;height:100%;" class="egret-player" id="gameDiv" data-entry-class="Main" data-orientation="auto" data-scale-mode="showAll" data-frame-rate="30"
+    data-content-width="1680" data-content-height="531" data-show-paint-rect="false" data-multi-fingered="2" data-show-fps="false"
+    data-show-log="false" data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
+    </div>
+            <script>
+                /**
+                 * {
+                 * "renderMode":, //引擎渲染模式，"canvas" 或者 "webgl"
+                 * "audioType": "" //使用的音频类型，0:默认，1:qq audio，2:web audio，3:audio
+                 * "antialias": //WebGL模式下是否开启抗锯齿，true:开启，false:关闭，默认为false
+                 * }
+                 **/
+
+                egret.runEgret({ renderMode: "webgl", audioType: 0 ,retina:true});
+
+                 var gamemain = new game.GamePanel(); //去掉 a 的类型
+                $("#putong").click(function(){
+                    gamemain.gopage(1);
+                });
+                $("#zhineng").click(function(){
+                    gamemain.gopage(2);
+                });
+                $("#yidong").click(function(){
+                    gamemain.gopage(3);
+                });
+                $("#shuju").click(function(){
+                    gamemain.gopage(4);
+                });
+                function showpage(n){
+                    //显示场景tit
+                     $(".section2_top li").eq(n-1).addClass("act").siblings().removeClass("act");
+                }
+
+            </script>
+        <div class="sss">
+        </div>
+    </div>
+        <div class="h5_bottom">
+            <p>
+                定制您的智能办公方案
+                <span>
+                    <a href="http://srv.shop.17.lenovo.com.cn/chat/index.do?gd=76&pt=8&sd=8&hint=portalzhinengbangong" style="color:#FFF;">
+                        点击定制
+                    </a>
+                </span>
+            </p>
+        </div>
+
+    <div id="three-bot"></div>
+   
+    </div>
+    <!-- h5结束 -->
+    <!--第三屏end-->
+    <div class="six">
+    	<div class="sContent">
+    		<h2 class="sTitle">百应企业服务联盟伙伴</h2>
+    		<p class="sDetitle">联想联合业内顶级的软件、硬件、云服务厂商，共同为企业提供全面、高品质的IT服务<br/>同时，联盟与政府公共服务平台、产业园区展开深度战略合作，助力旗下企业转型升级</p>
+    		<ul class="sTu">
+    			<li><img src="https://p4.lefile.cn/product/adminweb/2018/09/06/378baff0-b627-4ed5-83ad-cd29998f85e2.png" alt="" /></li>
+    			<li><img src="https://p3.lefile.cn/product/adminweb/2018/09/06/752694ca-c26c-4352-95cb-75ac3af9ca81.png" alt="" /></li>
+    			<li><img src="https://p1.lefile.cn/product/adminweb/2018/09/18/71850279-ae50-49f8-adec-49255bce312b.png" alt="" /></li>
+    			<li><img src="https://p4.lefile.cn/product/adminweb/2018/09/06/c662c04c-ae71-4668-91e3-b8fe52908d07.png" alt="" /></li>
+    			<li><img src="https://p4.lefile.cn/product/adminweb/2018/09/06/54f2129d-8339-46db-b2a5-c695b82dd851.png" alt="" /></li>
+    			<li><img src="https://p1.lefile.cn/product/adminweb/2018/09/06/b8f47421-2578-412b-bdbb-307f5d13d226.png" alt="" /></li>
+    			<li><img src="https://p4.lefile.cn/product/adminweb/2018/09/06/f9eca1fd-3d7a-492b-8e31-9bc283e5c2f2.png" alt="" /></li>
+    			<li><img src="https://p3.lefile.cn/product/adminweb/2018/09/06/7b3ecf17-75c0-4423-9d35-d025f0859204.png" alt="" /></li>
+    		</ul>
+    	    <a href="https://www.baiying.cn/17activity/SignUp.html" target="_blank">加入百应联盟</a>
+    	</div>
+    	<div class="dbBanner">
+    		<img src="https://p3.lefile.cn/product/adminweb/2018/09/05/dfe076b8-f2cc-4a85-a5e4-021d9a4b1fab.png" alt="" />
+    		<a target="_blank"href="https://ezg.lenovo.com.cn/warranty.html?pmf_group=zichanguanlihuodong&pmf_medium=zichanguanlihuodongbaiyingshouye&pmf_source=Z00003979T000"></a>
+    	</div>
+    </div>
+	</body>
+	<script src="https://m1.lefile.cn/smb/idangerous.swiper.min.js"></script>
+	<script src="https://m1.lefile.cn/smb/unslider.min.js"></script>
+	
+<script type="text/javascript">
+lunbo();
+function lunbo(){
+	var time_id=null;
+    var index=$(".img ul li").length;
+    var html="";
+    if(index>1){
+      	for(var i=0;i<index;i++){
+      		html+="<li><div class='line'><p></p></div></li>"
+      	};
+        $(".nav ul").html(html);
+    }
+    var width=$(".nav ul li").width()*index+10*index+"px";
+    var left="-"+($(".nav ul li").width()*index+10*index)/2+"px";
+    $(".nav").css("width",width).css("marginLeft",left);
+    var i=0;
+    time_id=setInterval(function auto(){
+	        $(".nav ul li").eq(i).find("p").animate({
+	          "width":"30px"
+	        },3800,function(){
+	          i++;
+	          $(this).css("width", '0px');
+	          if(i>index-1){
+	            i=0;
+	          }
+	          $(".img ul li").eq(i).fadeIn(300).siblings().fadeOut(300);
+	        });
+	 },4000);
+      $(".text ul li").click(function(){
+	        $(".nav ul li").find("p").stop().css("width","0px");
+	        clearInterval(time_id);
+	        i=$(this).index();
+	        $(".img ul li").eq(i).fadeIn().siblings().fadeOut();
+	       
+	        time_id=setInterval(function auto(){
+		        $(".nav ul li").eq(i).find("p").animate({
+		          "width":"30px"
+		        },3800,function(){
+		          i++;
+		          $(this).css("width",'0px');
+		          if(i>index-1){
+		            i=0;
+		          }
+		          $(".img ul li").eq(i).fadeIn().siblings().fadeOut();
+		        });
+		    },4000);
+      });
+      $(".nav ul li").click(function(){
+	        $(".nav ul li").find("p").stop().css("width","0px");
+	        clearInterval(time_id);
+	        i=$(this).index();
+	        $(".img ul li").eq(i).show().siblings().hide();
+	        $(this).find('p').css({'width':"30px"}).siblings().parents('li').find('p').css({'width':0})
+	        time_id=setInterval(function auto(){
+//	        	alert(2)
+		        $(".nav ul li").eq(i).find("p").animate({
+		          "width":"30px"
+		        },3800,function(){
+		          i++;
+		          $(this).css("width", '0px');
+		          if(i>index-1){
+		            i=0;
+		          }
+		          $(".img ul li").eq(i).fadeIn().siblings().fadeOut();
+		        });
+	        },4000);
+      })
+      
+ }
+$(function (){
+      //table切换
+      $(".table li").click(function(){
+	      	$(this).addClass("active").siblings().removeClass("active");
+	      	var index=$(this).index();
+	      	$(".Fcontent").eq(index).addClass("fActive").siblings().removeClass("fActive");
+	      	$(".itSecond .sContent").eq(index).addClass("itsActive").siblings().removeClass("itsActive");
+            $(".itSecond .sContent .write").eq(index).find("input").val("");
+      })
+     //广告位关闭
+      $(".ad .close").click(function(){
+      	$(".ad").hide();
+      })
+//    //图层效果
+      $(".itFour .liHover").mouseenter(function(){
+      	$(this).children('.tuceng').show();
+      	$(this).children('.tuceng').animate({"height":"406"},300);
+      	$(this).children('i').hide();
+      	$(this).children('span').hide();
+      }).mouseleave(function(){
+      		$(this).children('i').show();
+      		$(this).children('span').show();
+      		$(this).children('.tuceng').animate({"height":"0"},300,function(){
+      		$(this).children('.tuceng').hide();
+      	});
+      });
+      //信息提交成功窗口的关闭
+      $(".sClose").click(function(){
+      	$(".mask").hide();
+      	$(".sucessTi").hide();
+      })
+      //提交接口域名
+        var messageUrl ="";   
+        if(document.domain.indexOf('uat.com') != -1){
+                 messageUrl = "//reg.17.lenovouat.com";     
+        }else{
+            	 messageUrl="//reg.baiying.cn";    
+        };
+     //提交信息
+      var account="",type="",cheackCoupon=false;
+      $(".itSecond .btn").click(function(){  
+      	    $(".cheackCode").val("");
+	      	 type=$(this).attr("dataId");
+	      	 if(type==11){
+	      	    $(".sucess1").html("提交成功");
+	      	 	$(".sucess2").html("优惠券会在<span>24小时内</span>到达您的账户！<br/>请用您填写的手机号码快捷登录，在个人中心-我的优惠券处查询");
+	      	 }else if(type==12){
+	      	 	 $(".sucess1").html("领取成功！");
+	      	 	 $(".sucess2").html("您申请试用的软件会在<span>3个工作日内</span>开通账号<br/>开通后，联想IT管家会电话通知您");
+	      	 }else if(type==13){
+	      	 	 $(".sucess1").html("提交成功！");
+	      	 	 $(".sucess2").html("您的申请已经收到，IT顾问会在<span>3个工作日内</span>与您电话联系确认企业信息，<br/>确认后即可为您开通一站式售后服务专属密码！");
+	      	 }else if(type==14){
+	      	 	 $(".sucess1").html("提交成功");
+	      	 	 $(".sucess2").html("您的申请已经收到，IT顾问会在<span>3个工作日内</span>与您电话联系<br/>与您确认套餐定制需求，请保持电话畅通");
+	      	 }else if(type==15){
+	      	 	 $(".sucess1").html("提交成功");
+	      	 	 $(".sucess2").html("您的申请已经收到，您的IT管家会在<span>3个工作日内</span>与您电话联系<br/>为您建立客户档案，便于提供定制化服务，请保持电话畅通");
+	      	 };
+	      	 if(type==12){
+	      	 	cheackCoupon=true;
+	      	 	$(".ruanjian").show();
+	      	 	$(".pcontent").show();
+	      	 }else{
+	      	 	cheackCoupon=false;
+	      	 	$(".ruanjian").hide();
+	      	 	$(".pcontent").hide();
+	      	 }
+	      	var account=$(this).siblings().val();
+	      	if(account==""){
+	      		alert("手机号不能为空");
+	      		return;
+	      	}else if(!(/^1[3|4|5|8|7|6|9][0-9]\d{4,8}$/.test(account))||account.length != 11){
+	      		alert("手机号有误，请重新填写");
+	      		return;
+	      	}else{
+	      		$(".telnumber").val(account);
+		        cheackinform(account,type)
+	      	}
+      	
+      })
+     //检验手机号是否填写过信息
+      var whether=false; 
+      function cheackinform(moblie,type){
+	      var data={"account":moblie,"type":type}
+	      $.ajax({
+	      	type:"get",
+	      	url:messageUrl+"/newHomePage",
+	      	data:data,
+	      	dataType: "jsonp",
+	        success:function(data){
+	        	if(data.code==0){
+	          		$(".mask").show();
+		            $(".dialog-custom").show();
+		            $(".cheackCode").show();
+		            whether=true;
+	        	}else if(data.code==1){
+	        	     alert("您已经领取过了")
+	        	}else if(data.code==2){
+	        		$(".cheackCode").hide();
+	        		$(".mask").show();
+		            $(".dialog-custom").show();
+	        	}
+	        }
+	      });
+      }
+    //获取验证码倒计时
+		 var intervaltimer="",codeFlag=true;
+		 function timerCode(i){
+		 	 codeFlag=false;
+		 	intervaltimer=setInterval(function(){
+		 		if(i<=0){
+		 			$(".time").html("发送验证码")
+		 			clearInterval(intervaltimer);
+		 			codeFlag=true;
+		 		}else{
+		 			i=i-1;
+		 		    var str=i+"后重新获取验证码"
+		 			$(".time").html(str)
+		 			  
+		 		}
+		 	},1000)
+		 }
+	//点击获取验证码
+		 $(".time").click(function(){
+		 		var i=100;
+			 	if(codeFlag){
+			 		 var account=$(".telnumber").val();
+		 		     timerCode(i);
+		 		     checkMobileCode(account);
+		 	   }	 
+		 })
+	//校验验证码是否发送成功
+		 function checkMobileCode(mobile){
+		  $("#code").parent().find("i strong").remove();
+		   var data={"account":mobile,"type":1};
+		 	$.ajax({
+		 		type:"get",
+		 		url:messageUrl+"/auth/v4/smsByzc",
+		 		data:data,
+		 		success:function(data){
+		 			if(data.code==9999){
+		 			$("#code").parent().find("i").append("<strong>获取验证码失败，请稍后重试</strong>")
+		 			}else if(data.code==1000){
+                    $("#code").parent().find("i strong").remove();
+		 			}
+		 		}
+		 	});
+		 }
+    //验证填写信息是否有误
+		 var captcha="",name="",companyName="",contetent="",supplement="";
+		 $(".forms input").blur(function() {
+		 	if($(this).is("#name")){
+		 		  name=$("#name").val();
+		 		 $(this).parent().find("i strong").remove();
+			      	if(!(/^[\u4E00-\u9FA5]{2,4}$/).test(name)){
+			      		$(this).parent().find("i").append("<strong>姓名只能输入汉字</strong>")
+			      		return;
+			      	}else{
+			      		$(this).parent().find("i strong").remove();
+			      	}
+		 	  };
+	//验证公司信息
+		 	if($(this).is("#companyName")){
+		        companyName = $("#companyName").val();
+		       $(this).parent().find("i strong").remove();
+		       if(!companyName){
+		    	    $(this).parent().find("i").append("<strong>公司名称不能为空</strong>");
+		            return;
+		        }else if(companyName.length>50) {
+		          	$(this).parent().find("i").append("<strong>公司名称不能超过50个字符</strong>");
+			        return;
+			    }else if((/[~!@#$%^&*￥()/\|,.<>?"'();:_+-=\[\]{}]/).test(companyName)){
+					$(this).parent().find("i").append("<strong>公司名称不能有特殊字符</strong>");	 
+					return;
+			    }else{
+			      $(this).parent().find("i strong").remove();
+			    };
+		 	};
+    //验证填写的验证码
+		 if(whether){
+		 	if($(this).is("#code")){
+		   	   captcha = $("#code").val();
+		   	  $(this).parent().find("i strong").remove();
+		 	  if(!captcha){
+		 	  	 $(this).parent().find("i").append("<strong>验证码不能为空</strong>");
+		 	  }else{
+		 	  	$(this).parent().find("i strong").remove();
+		 	  }
+		   };
+		 }else{
+		 	$(".cheackCode").hide();
+		 	captcha="";
+		 }
+	//验证软件信息
+		if(cheackCoupon){
+		 	if($(this).is(".softwareKind")){
+		       software=$(".softwareKind").val();
+		       $(this).parent().find("i strong").remove();
+		       if(!software){
+		    	    $(this).parent().find("i").append("<strong>软件类型不能为空</strong>");
+		            return;
+		        }else if(software.length>50) {
+		          	$(this).parent().find("i").append("<strong>软件类型不能超过50个字符</strong>");
+			        return;
+			    }else if((/[~!@#$%^&*￥()/\|,.<>?"'();:_+-=\[\]{}]/).test(software)){
+					$(this).parent().find("i").append("<strong>软件类型不能有特殊字符</strong>");	 
+					return;
+			    }else{
+			      $(this).parent().find("i strong").remove();
+			    };
+		 	};
+		 }else{
+		 	software="";	
+		 }
+		});
+		 //验证需求信息的填写
+		$(".request").blur(function(){
+			if(cheackCoupon){
+				if($(this).is(".request")){
+			   	 supplement= $(".request").val();
+			   	$(this).parent().find("i strong").remove();
+			   	  if(!supplement ){
+			   	  	 $(this).parent().find("i").append("<strong>需求信息不能为空</strong>");
+			   	  }else if(supplement.length>200) {
+			   	  	 $(this).parent().find("i").append("<strong>不能超过200个字符</strong>");
+			   	  }else if((/[~!#$%^&*￥/\|.<>'_+-=\[\]{}]/).test(companyName)){
+			   	  	 $(this).parent().find("i").append("<strong>不能有特殊字符</strong>");
+			   	  };
+			   };
+			}else{
+			  supplement="";
+		    }
+	});
+	
+  //验证弹框信息
+      $(".ljdz").click(function(){
+      	   $(".forms input").trigger("blur");
+      	   $(".forms textarea").trigger("blur");
+      	   var erronNum=$(".forms strong").length;
+		   var post=$(".industry").val();
+		   var productIntriduction=$(".scale").val();
+		
+		   if(!post){
+		   	   $(".industry").parent().find("i strong").remove();
+		   	   $(".industry").parent().find("i").append("<strong>请选择行业</strong>");
+			   	return;
+		    }else{
+		    	$(".industry").parent().find("i strong").remove();
+		    };
+		   if(!productIntriduction){
+		   	   $(".scale").parent().find("i strong").remove();
+		   	   $(".scale").parent().find("i").append("<strong>请选择规模</strong>");
+			   	return;
+		    }else{
+		    	 $(".scale").parent().find("i strong").remove();
+		    };
+		   var account=$(".telnumber").val();
+		   var data={"account":account,"username":name,"post":post,"type":type,
+		              "productIntriduction":productIntriduction,"content":software,
+		              "companyName":companyName,"captcha":captcha,"supplement":supplement
+		            }
+		  
+		   if(!erronNum){
+	   	     sumitData(data);
+		   }      		
+      })
+      //提交数据
+      function sumitData(data){
+      $.ajax({
+      	type:"post",
+      	url:messageUrl+"/newHomePageRegist",
+		data: data,
+		dataType:"jsonp",
+        success:function(data){
+        	if(data.code==1){
+        		$(".mask").show();
+        		$(".sucessTi").show();
+        		$(".dialog-custom").hide();
+        	}else if(data.code==2){
+        		alert("您已经领取过了");
+        	}else if(data.code==0){
+        		alert("您填写信息有误，请重新填写");
+        	}else if(data.code==3){
+        		 $("#code").parent().find("i").append("<strong>验证码有误</strong>");
+        	}
+        }
+      });
+      }
+      //关闭
+       $(".choice-btn .close").click(function(){
+      	 $(".mask").hide();
+      	 $(".dialog-custom").hide();
+      })
+	//智能动画
+    $(".section2_top li").click(function () {
+        $(".section2_top li").eq($(this).index()).addClass("act").siblings().removeClass("act");
+
+    })
+    
+    //首页智能专区动画自适应高度Fix
+  var pagewidth=$(document).width();if(pagewidth<1697){var canvas_div_height=pagewidth*532/1680;var mar_top=(542-canvas_div_height)/2;var divheight=canvas_div_height+mar_top*2;$(".nomaxmin").height(divheight);$(".egret-player").css("margin-top",-mar_top);$(".overh51").height(divheight-mar_top*2+20)}$(window).resize(function(){pagewidth=$(document).width();if(pagewidth<1697){canvas_div_height=pagewidth*532/1680;mar_top=(542-canvas_div_height)/2;divheight=canvas_div_height+mar_top*2;$(".nomaxmin").height(divheight);$(".egret-player").css("margin-top",-mar_top);$(".overh51").height(divheight-mar_top*2+20)}else{$(".nomaxmin").height("");$(".egret-player").css("margin-top","");$(".overh51").height("")}});
+    $("#putong").click(function () {
+        $("#b04").css("display", "block");
+        $("#b03").css("display", "none");
+        $("#b02").css("display", "none");
+        $("#b01").css("display", "none");
+
+        // $(".h51").css("display","block");
+        // $(".h52").css("display","none");
+        // $(".h53").css("display","none");
+        // $(".h54").css("display","none");
+    })
+    $("#zhineng").click(function () {
+        $("#b04").css("display", "none");
+        $("#b03").css("display", "block");
+        $("#b02").css("display", "none");
+        $("#b01").css("display", "none");
+
+        // $(".h51").css("display", "none");
+        // $(".h52").css("display", "block");
+        // $(".h53").css("display", "none");
+        // $(".h54").css("display", "none");
+    })
+    $("#yidong").click(function () {
+        $("#b04").css("display", "none");
+        $("#b03").css("display", "none");
+        $("#b02").css("display", "block");
+        $("#b01").css("display", "none");
+
+        // $(".h51").css("display", "none");
+        // $(".h52").css("display", "none");
+        // $(".h53").css("display", "block");
+        // $(".h54").css("display", "none");
+    })
+    $("#shuju").click(function () {
+        $("#b04").css("display", "none");
+        $("#b03").css("display", "none");
+        $("#b02").css("display", "none");
+        $("#b01").css("display", "block");
+
+        // $(".h51").css("display", "none");
+        // $(".h52").css("display", "none");
+        // $(".h53").css("display", "none");
+        // $(".h54").css("display", "block");
+    })
+
+})
+
+
+
+$(document).ready(function (e) {
+    var unslider04 = $("#b04").unslider({
+        dots: true
+    }),
+        data04 = unslider04.data('unslider');
+    $('.unslider-arrow04').click(function () {
+        var fn = this.className.split(' ')[1];
+        data04[fn]();
+    });
+});
+
+
+
+$(document).ready(function (e) {
+    var unslider03 = $('#b03').unslider({
+        dots: true
+    }),
+        data03 = unslider03.data('unslider');
+    $('.unslider-arrow03').click(function () {
+        var fn = this.className.split(' ')[1];
+        data03[fn]();
+    });
+});
+
+
+
+
+$(document).ready(function (e) {
+    var unslider02 = $('#b02').unslider({
+        dots: true
+    }),
+        data02 = unslider02.data('unslider');
+    $('.unslider-arrow02').click(function () {
+        var fn = this.className.split(' ')[1];
+        data02[fn]();
+    });
+});
+
+
+
+
+
+$(document).ready(function (e) {
+    var unslider01 = $('#b01').unslider({
+        dots: true
+    }),
+        data01 = unslider01.data('unslider');
+    $('.unslider-arrow01').click(function () {
+        var fn = this.className.split(' ')[1];
+        data01[fn]();
+    });
+});
+
+$(document).ready(function (e) {
+    var DEFAULT_VERSION = 8.0;
+    var ua = navigator.userAgent.toLowerCase();
+    var isIE = ua.indexOf("msie") > -1;
+    var safariVersion;
+    if (isIE) {
+        safariVersion = ua.match(/msie ([\d.]+)/)[1];
+    }
+    if (safariVersion <= DEFAULT_VERSION) {
+        // alert('系统检测到您正在使用ie8以下内核的浏览器，不能实现完美体验，请更换或升级浏览器访问！')
+
+        $(".jingtaibanner").css("display", "block");
+        $(".overh51").css("display", "none");
+    };
+});
+//种cookie
+var a=window.location.search;
+	var domain="";
+	if(window.location.href.indexOf(".lenovouat.com")>-1){
+		domain="17.lenovouat.com";
+	}else{
+		domain="baiying.cn";
+	}
+	if(a){
+		 a=a.split("?")[1];
+		 if(a.indexOf("aid")>-1&& a.indexOf("channel")>-1&& a.indexOf("cid")>-1 && a.indexOf("wi")>-1){
+			a=encodeURIComponent(a);
+			setCookie("inform",a,30)
+		}
+		
+	}
+	function setCookie(cname, cvalue, exdays) {
+		    var d = new Date();
+		    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+		    var expires = "expires="+d.toUTCString();
+		    document.cookie = cname + "=" + cvalue + "; "+"domain="+domain+";"+ expires+";path=/";
+		   
+    }
+	</script>
+</html>

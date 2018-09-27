@@ -1,0 +1,197 @@
+
+<div class="piece btn_cntr_in_piece main-wrap20181128" datatype="5" sort="1" mulityData="0">
+	<style type="text/css">
+		.main-wrap20181128 .top{width:100%;background:#2c2c2c;}
+		.main-wrap20181128 .top .topContent{width:1200px;height:40px;margin:0 auto;}
+		.main-wrap20181128 .top .topContent .topright{width:375px;height:40px;float:right;position:relative;}
+		.main-wrap20181128 .top .topContent .topright a{cursor:pointer;text-decoration: none;margin-left:20px;text-align: center;line-height:40px;float: left;color:#fff;font-size:14px;}
+	    .main-wrap20181128 .top .topContent .topright .gouwuche{cursor:pointer;float:left;width:40px;height:40px;position:relative;}
+	    .main-wrap20181128 .top .topContent .topright span{margin-left:15px;float:left;width:30px;height:40px;background:url(https://p2.lefile.cn/product/adminweb/2018/08/01/32c4acdc-51c3-4fff-a680-2dde95260de2.png) no-repeat -1px 10px;}
+	    .main-wrap20181128 .top .topContent .topright i{position:absolute;width:18px;height:18px;background:red;border-radius:50%;top:5px;right:-7px;font-size:12px;text-align: center;line-height:18px;font-style: normal;color:#fff;}
+	    .main-wrap20181128 .top .topfrist{float:right;line-height:40px;}
+	    .main-wrap20181128 .top .topfrist a{float:left;color:#fff;font-size:14px;cursor:pointer;}
+	    .main-wrap20181128 .top .topfrist .exit{margin-left:15px;}
+	    .main-wrap20181128 .header{width:100%;height:100px;}
+	    .main-wrap20181128 .header .headerContent{height:70px;width:1200px;margin:0 auto;padding:15px 0;}
+	    .main-wrap20181128 .header .headerContent .logo{width:230px;height:70px;float:left;text-decoration: none;}
+	    .main-wrap20181128 .header .headerContent .logo img{width:180px;height:40px;border:none;}
+	    .main-wrap20181128 .header .headerContent .logo h2{width:180px;line-height:30px;text-align: center;font-size:16px;color:#000}
+	    .main-wrap20181128 .header .headerContent .meniu{line-height:70px;float:left;width:570px;}
+	    .main-wrap20181128 .header .headerContent .meniu a{float:left;width:90px;text-align: center;font-size:16px;color:#000;}
+	    .main-wrap20181128 .header .headerContent .search_box{width:270px;float:left;margin-top:18px;}
+	    .main-wrap20181128 .header .headerContent .search_box input{width:227px;height:40px;float:left;border:1px solid #b7b7b7;}
+	    .main-wrap20181128 .header .headerContent .search_box .serch_box_img{height:40px;width:40px;float:left;border:1px solid #b7b7b7;border-left:none;background:url(https://p1.lefile.cn/product/adminweb/2018/08/01/4e6f545e-0613-43a5-824e-daa0914fef42.png) no-repeat 4px 4px;}
+	    .main-wrap20181128 .header .headerContent .zixun{width:115px;height:42px;float:left;background:url(https://p3.lefile.cn/product/adminweb/2018/08/01/1975622b-b45d-441a-938f-39dd2cf611e6.png) no-repeat;margin-top:18px;margin-left:5px;}
+	</style>
+    <!--#set(Map rs = data("5","floorId=#",1))-->
+    <div datatype="5" sort="1">
+       <div class="top">
+			<div class="topContent">
+				
+				<div class="topright">
+					<a class="regist" href="" latag="latag_pc_common_header_register" target="_blank">免费注册</a>
+					<a href="" target="_blank">联想官网</a>
+					<a href="" target="_blank">京东商城</a>
+					<a class="myorder">个人中心</a>
+					<div class="gouwuche">
+						<span></span>
+						<i class="num" id="top_cart_count">0</i>
+					</div>
+					
+				</div>
+				<div class="topfrist">
+					<a class="login";target="_blank">请登录</a>
+					<a class="exit" style="display: none;">退出</a>
+				</div>
+				
+			</div>
+		</div>
+		<div class="header">
+			<div class="headerContent">
+				<a class="logo" href="" target="_blank">
+					<img src="https://p2.lefile.cn/product/adminweb/2018/08/01/8efb2cb4-593e-4cdf-bd7a-0ddf1998c253.png"> 
+					<h2>成长型企业一站式IT服务</h2>
+				</a>
+				<div class="meniu">
+					<a href="" target="_blank">百应首页</a>
+					<a href="" target="_blank">买硬件  </a>
+					<a href="" target="_blank">租硬件</a>
+					<a href="" target="_blank">选软件</a>
+					<a href="" target="_blank">找服务</a>
+					<a href="" target="_blank">关于我们</a>
+				</div>
+				 
+				<div class="search_box think_search_header">
+				 <input type="text" class="search" latag="latag_pc_search_keyword"  placeholder-url="http://s.baiying.cn/?key=ThinkPad%2013&index="/>
+				 <a   tag="searchButton" class="serch_box_img" latag="latag_pc_search_confirm"/></a>
+			   </div>
+			   <a  href="" class="zixun" target="_blank" > </a>
+			</div>
+		</div>
+    </div>
+
+<script type="text/javascript">
+     $(function(){
+            var _iUserUrl = "",zhuce="",denglu="",getnum="",_cartUrl,_orderUrl;
+            if(document.domain.indexOf('uat.cn') != -1){
+                _iUserUrl = "https://i.17.lenovouat.cn/infocenter/userinfo.jhtml";
+            }else if(document.domain.indexOf('uat.com') != -1){
+                zhuce = "//reg.17.lenovouat.com/auth/v4/regist";
+                denglu = "//reg.17.lenovouat.com/auth/v4/login";
+               _iUserUrl = "http://i.17.lenovouat.com/infocenter/userinfo.jhtml";
+               getnum="http://cart.17.lenovouat.com";
+               _orderUrl="http://order.17.lenovouat.com/center/orderlist.jhtm";
+               _cartUrl="http://cart.17.lenovouat.com/getcart.jhtml?plat=1";
+            }else{
+            	denglu="//reg.baiying.cn/auth/v4/login";
+                zhuce = "//reg.baiying.cn/auth/v4/regist";
+                _iUserUrl = "https://i.baiying.cn/infocenter/userinfo.jhtml";
+                getnum="https://cart.baiying.cn";
+                _orderUrl="https://order.baiying.cn/center/orderlist.jhtm";
+                _cartUrl="https://cart.baiying.cn/getcart.jhtml?plat=1"
+            };
+            var loginEl = $(".main-wrap20181128 .login");
+            var exitEl = $(".main-wrap20181128 .exit");
+            var regEl = $(".main-wrap20181128 .regist");
+            passport.load(function(){
+                if(passport.isLogin()){
+                    loginEl.text(passport.cookie.loginName).attr("href",_iUserUrl);
+                    exitEl.show();
+                    regEl.hide();
+                    if(window.location.href.indexOf("infocenter/userinfo.jhtml")==-1){
+        	          Popup();
+                    };
+                }else{
+                    loginEl.text("请登录").removeAttr("href");
+                    exitEl.hide();
+                    regEl.show();
+                };
+				regEl.click(function() {
+					 var _url = zhuce +"?ru="+encodeURIComponent(window.location.href);
+					 $(this).attr("href",_url);
+					
+				});
+               loginEl.click(function() {
+                    	if(!passport.isLogin()){
+                	    var _url=denglu +"?ru="+encodeURIComponent(window.location.href);
+                	    $(this).attr("href",_url);
+                	  }
+				    });
+				
+                passport.kit.init({
+                     logoutBtn:exitEl,
+                     loginBtn:"",
+                     loginCallback:function(){
+                        loginEl.text(passport.cookie.loginName).attr("href",_iUserUrl);
+                        exitEl.show();
+                    },
+                     logoutCallback:function(){
+                        loginEl.text("请登录").removeAttr("href");
+                        exitEl.hide();
+                        regEl.show();
+                        if(redirect17Url){
+                            window.location.href = redirect17Url;
+                        }
+                    }
+                });
+            });   
+     function getcartcount(){
+            $.ajax({
+                url: getnum +"/getshoppingcartcount.jhtml",
+                dataType: "jsonp",
+                async: false,
+                type: "get",
+                jsonp: "callbackparam",
+                success: function (data) {
+                    if (data.rc == 0) {
+                        $("#top_cart_count").text(data.count);
+                    }
+                },
+                error: function (a, b, c) {
+
+                }
+            });
+        };
+        //邮箱没有绑定手机去个人中心
+    	function Popup(){
+		if(document.domain.indexOf('uat.com') != -1) {
+          orderAjax = "http://i.17.lenovouat.com";
+        } else {
+          orderAjax = "https://i.baiying.cn";
+        }
+		$.ajax({
+			type:"get",
+			url:orderAjax +"/infocenter/checkLoginname.jhtml",
+			dataType: "jsonp",	
+			success:function(data){  
+               if(data.ret == '9999') {
+					time();
+				}else if(data.ret == '0000') {
+					return;
+				}
+            },  
+			error: function() {
+				alert("系统异常，请刷新重试");
+			}		
+			})  
+	   };
+        passport.load(function(){
+	             getcartcount();
+	            $(".main-wrap20181128 .gouwuche").click(function(){
+	                if(passport.isLogin()){
+	                   window.location.href =_cartUrl;
+	                }else{
+            	        window.location.href =denglu+"?ru="+encodeURIComponent(document.URL);
+                    }
+	            })
+	            $(".main-wrap20181128 .myorder").bind("click",function(){
+	            	if(passport.isLogin()){
+	                   window.location.href =_orderUrl;
+	                }else{
+            	        window.location.href =denglu+"?ru="+encodeURIComponent(document.URL);
+		             }  
+	           });
+            
+        });
+});
+</script>

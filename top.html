@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{margin:0;padding:0;}
+		a{text-decoration: none;}
+		li{list-style: none;}
+		.totale{width:100%;height:100px;position: absolute; background: rgba(0,0,0,0.5)}
+		.top{width:100%;}
+		.top .topContent{width:1200px;height:50px;margin:0 auto;}
+		.top .topContent .logo{width: 190px;height: 50px;float:left;text-decoration: none;}
+		.top .topContent .logo img{display:block;border: none;height:100%;width:100%;}
+		.top .topContent .topright{width:375px;height:50px;float:right;position:relative;}
+		.top .topContent .topright a{cursor:pointer;text-decoration: none;margin-left:20px;text-align: center;line-height:50px;float: left;color:#fff;font-size:14px;}
+	    .top .topContent .topright .gouwuche{cursor:pointer;float:left;width:40px;height:50px;position:relative;}
+	    .top .topContent .topright span{margin-left:15px;float:left;width:30px;height:50px;background:url(https://p2.lefile.cn/product/adminweb/2018/08/01/32c4acdc-51c3-4fff-a680-2dde95260de2.png) no-repeat -1px 15px;}
+	    .top .topContent .topright i{position:absolute;width:18px;height:18px;background:red;border-radius:50%;top:5px;right:-7px;font-size:12px;text-align: center;line-height:18px;font-style: normal;color:#fff;}
+	    .top .topfrist{float:right;line-height:50px;}
+	    .top .topfrist .login{color: #00B8DE;}
+	    .top .topfrist a{float:left;color:#fff;font-size:14px;cursor:pointer;}
+	    .top .topfrist .exit{margin-left:15px;}
+	    .header{width:100%;height:50px;border-top:1px solid #8ba2bd;border-bottom: 1px solid #8ba2bd;box-sizing: border-box;}
+	    .header .headerContent{height:50px;width:1200px;margin:0 auto;position: relative;}
+	    .header .headerContent .logoContent{width:200px;height:50px;float:left;text-decoration: none;}
+	    .header .headerContent .logoContent h2{text-align:center;line-height:50px;font-size:16px;font-weight:normal;color:#fff;}
+	    .header .headerContent .meniu{line-height:50px;float:left;width:570px;margin-left:35px;}
+	    .header .headerContent .meniu a{color:#fff;float:left;margin-right: 15px;text-align: center;font-size:16px;}
+	    .header .headerContent .meniu .high{color: #00B8DE;}
+	    .header .headerContent .searchHigh{border: 1px solid #00c1de;}
+	    .headerContent .search_box{cursor:pointer;height:50px;box-sizing:border-box;width:200px;float:left;position: absolute;right: 100px;bottom:1px;background:rgba(0,0,0,0.5);}
+	    .header .headerContent .search_box input{width:100%;padding-right:35px;box-sizing:border-box;padding-left:8px;color:#fff;height:50px;float:left;border:none;outline: none;background:none;font-size:16px;}
+	    .header .headerContent .search_box input::-webkit-input-placeholder{color:#b7b6b6;}
+	    .header .headerContent .search_box .serch_box_img{width: 40px; height: 40px;text-align:center;cursor:pointer;position: absolute;right: 4px;top:9px}
+	    .header .headerContent .search_box .serch_box_img img{width: 21px;height: 21px;margin-top: 6px;}
+	    .header .headerContent .zixun{position:absolute;right:23px;color: #00B8DE;line-height: 41px;float:left;margin-top:5px;margin-left:5px;}
+        #hot_school .close1{cursor:pointer;width:30px;height:30px;display: block;position:absolute;top:5px;right:0;background:url(https://p1.lefile.cn/product/adminweb/2018/08/01/d770f983-0a50-4504-9329-3ad7b008ffe1.png) no-repeat;}
+        #hot_school .close2{cursor:pointer;width:30px;height:30px;display: block;position:absolute;top:5px;right:0;background:url(https://p1.lefile.cn/product/adminweb/2018/08/01/d770f983-0a50-4504-9329-3ad7b008ffe1.png) no-repeat;display: none;}
+        #hot_school { margin: 0 auto;position: relative;}
+        #hot_school .hot_sch_big {display: block;position: relative;overflow: hidden;}
+        #hot_school .hot_sch_small {position: relative;overflow: hidden;display: none;}
+        #hot_school .sch_tomin, #hot_school .sch_close {position: absolute;right: 0;top: 5px;display: inline-block;width: 20px;height: 20px;text-indent: -9999px;cursor: pointer;}
+        .hot_div{max-width: 1920px;position: relative;margin: 0 auto;}
+
+	</style>
+	<body>
+	<div id="hot_school">
+		<div class="hot_div">
+	   			<a href="https://www.baiying.cn/17activity/about.html" target="_blank" class="hot_sch_big">
+	   				<div style="background: url(https://p3.lefile.cn/product/adminweb/2018/09/06/42dcff0f-c958-40d2-9285-216445a64c8c.png) center no-repeat; height: 150px;"></div>
+	   			</a>
+	   			<span class="close1"></span>
+
+	   			<a href="https://www.baiying.cn/17activity/about.html" title="" target="_blank" class="hot_sch_small" latag="latag_pc_home_hotschool_https://shop.lenovouat.com/activity/marketing/customized/index.html">
+	   				<div style="background: url(https://p3.lefile.cn/product/adminweb/2018/09/06/42dcff0f-c958-40d2-9285-216445a64c8c.png) center no-repeat; height: 100px;"></div>
+	   			</a>
+	   			<span class="close2"></span>
+		</div>
+	</div>
+	<div class="totale">
+		<div class="top">
+			<div class="topContent">
+				<a class="logo" href="https://www.baiying.cn/" target="_blank">
+					<img src="https://p1.lefile.cn/product/adminweb/2018/08/09/90b6cda0-3736-4304-a08a-4ce3d0cee757.png"> 
+				</a>
+				<div class="topright">
+					<a class="regist" href="" latag="latag_pc_common_header_register" target="_blank">免费注册</a>
+					<a href="" target="_blank">联想官网</a>
+					<a href="" target="_blank">京东商城</a>
+					<a href="" target="_blank">个人中心</a>
+					<div class="gouwuche">
+						<span></span>
+					    <i class="num">0</i>
+					</div>
+				</div>
+				<div class="topfrist">
+					<a class="login";target="_blank">请登录</a>
+					<a class="exit" style="display: none;">退出</a>
+				</div>
+				
+			</div>
+		</div>
+		<div class="header">
+			<div class="headerContent">
+				<a class="logoContent" href="https://www.baiying.cn/" target="_blank">
+					<h2>成长型企业一站式IT服务</h2>
+				</a>
+				<div class="meniu">
+					<a href="https://www.baiying.cn/" target="_blank">百应首页</a>
+					<a href="" target="_blank">买硬件  </a>
+					<a href="" target="_blank">租硬件</a>
+					<a href="" target="_blank">选软件</a>
+					<a href="" target="_blank">找服务</a>
+					<a href="https://www.baiying.cn/17activity/about.html" target="_blank">关于我们</a>
+				</div>
+				 
+				<div class="search_box think_search_header">
+				 <input type="text" class="search" latag="latag_pc_search_keyword" placeholder="thinkPad" placeholder-url="http://s.baiying.cn/?key=ThinkPad%2013&index="/>
+				 <a tag="searchButton" class="serch_box_img" latag="latag_pc_search_confirm"/><img src="https://img.alicdn.com/tfs/TB169ppCFOWBuNjy0FiXXXFxVXa-32-32.png" alt="" /></a>
+			   </div>
+			   <a  href="http://crm2.qq.com/page/portalpage/wpa.php?uin=4009868999&aty=0&a=0&curl=&ty=1" class="zixun" target="_blank" >咨询顾问</a>
+			</div>
+		</div>
+	</div>
+	</body>
+	<script src="js/jquery-1.11.0.js"></script>
+	<script>
+		toSchool(2000); 
+	    var toMin = null;
+	    function toSchool(autotime) {
+                toMin = setTimeout(function () {
+                        $('#hot_school .hot_sch_big').animate({'height':'100px' },500,function () {
+                        $('#hot_school .hot_sch_big').hide(0);
+                        $('#hot_school .hot_sch_small').css('display','block').show(0);
+                        $('.close1').hide(0);
+                        $('.close2').show(0);
+                    });
+                }, autotime);
+            };
+            $('#hot_school .close1').click(function () {
+                    clearTimeout(toMin);
+                    $('#hot_school .hot_sch_big').animate({'height':'0' }, 300, function () {
+                       $('#hot_school').hide(0);
+                    });
+                });
+             $('#hot_school .close2').click(function () {
+                    $('#hot_school .hot_sch_small').animate({ 'height':'0px' }, 300, function () {
+                        $('#hot_school').hide(0);
+                    });
+                });
+             $('.meniu').on('click','a',function(){
+             	$(this).addClass('high').siblings().removeClass('high');
+             })
+             $('.search_box').mouseenter(function(){
+             	$(this).animate({width:"300px"});
+             	$(this).children('search').css({width:"300px"});
+             	$(this).addClass('searchHigh');
+             }).mouseleave(function(){
+             	$(this).animate({width:"200px"});
+             	$(this).removeClass('searchHigh');
+             	$(this).children('search').css({width:"200px"});
+             })
+             $('.search_box .search').focus(function(){
+             	$('.search_box').unbind("mouseleave");
+             	$('.search_box').addClass('searchHigh');
+             	$('.search_box').css({width:"300px"});
+             	$(this).animate({width:"300px"})
+             }).blur(function(){
+             	$(this).css({width:"200px"});
+             	$('.search_box').animate({width:"200px"});
+             	$('.search_box').removeClass('searchHigh');
+             	$('.search_box').bind("mouseleave",function(){
+             	$(this).animate({width:"200px"});
+             	$(this).removeClass('searchHigh');
+             	$(this).children('search').css({width:"200px"});
+             	});
+             	$(this).val('');
+             })
+	</script>
+</html>

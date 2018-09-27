@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<style type="text/css">
+    *{
+      margin:0;
+      padding:0;
+    }
+     
+    .bannar{
+      width:100%;
+      height:600px;
+      position:relative;
+    }
+    .img{
+      width:100%;
+      height:600px; 
+      overflow: hidden;
+    }
+    .img ul{
+      width:100%;
+      height:600px;
+      overflow: hidden;
+      position:relative;
+    }
+    .img ul li{
+      width:100%;
+      position: absolute;
+      height:490px;
+      list-style-type: none;
+    }
+    
+    .nav{
+      min-width:500px;
+      height:10px;
+      position:absolute;
+      bottom:150px;
+      left:50%;
+      margin-left:-350px;
+      z-index:10;
+    }
+    .nav ul{height:10px;margin:0 auto;}
+    .nav ul li{
+      width:100px;
+      height:20px;
+      float:left;
+      margin-left:38px;
+      list-style-type: none;
+      /*border:1px solid #cecece;*/
+      border-radius: 5px;
+      text-align: center;
+    }
+    .nav ul li .line{
+      width:100%;
+      height:4px;
+      background:rgba(0,0,0,.5);
+      float:left;
+      border-radius: 5px;
+    }
+    .nav ul li p{
+      width:0;
+      height:100%;
+      background:blue;
+      float:left;
+      border-radius: 5px;
+    }
+	</style>
+	<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<body>
+	<div class="bannar">
+      <div class="img">
+            <ul>
+	          <li style="background:red;z-index:5"></li>
+	          <li style="background:yellow;z-index:4"></li>
+	          <li style="background:blue;z-index:3"></li>
+	          <li style="background:orange;z-index:2"></li>
+            </ul>
+      </div>
+      <div class="nav">
+        <ul>
+        </ul>
+      </div>
+    </div>
+	</body>
+	<script type="text/javascript">
+      var time_id=null;
+      var index=$(".img ul li").length;
+      var html="";
+      for(var i=0;i<index;i++){
+      		html+="<li><div class='line'><p></p></div></li>"
+      	}
+     $(".nav ul").html(html)
+     var i=0;
+    time_id=setInterval("auto()",3000);
+	   function auto(){
+	   	console.log(2)
+	        $(".nav ul li").eq(i).find("p").animate({
+	          "width":"100px"
+	        },2900,function(){
+	          i++;
+	          $(this).css("width", '0px');
+	          if(i>index){
+	            i=0;
+	          }
+	          $(".img ul li").eq(i).fadeIn(300).siblings().fadeOut(300);
+	        });
+	      }
+      $(".text ul li").click(function(){
+	        $(".nav ul li").find("p").stop().css("width","0px");
+	        clearInterval(time_id);
+	        i=$(this).index();
+	        $(".img ul li").eq(i).fadeIn().siblings().fadeOut();
+	        auto();
+	        time_id=setInterval("auto()",3000);
+      });
+      $(".nav ul li").click(function(){
+	        $(".nav ul li").find("p").stop().css("width","0px");
+	        clearInterval(time_id);
+	        i=$(this).index();
+	        $(".img ul li").eq(i).show().siblings().hide();
+	        auto();
+	        time_id=setInterval("auto()",3000);
+      })
+  
+	</script>
+</html>
